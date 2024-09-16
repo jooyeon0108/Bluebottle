@@ -326,12 +326,11 @@ header nav ul .sub li a:focus{
     font-family: 'pretendard';
 }
 .contents .con2 .box{
-    /* margin-top: 20px; */
     width: 100%;
     height: 300px;
-    background-image: url(../images/staff_brewing.jpeg);
+    background-image: url(../images/staff_brewing0.jpg);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
