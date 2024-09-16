@@ -500,25 +500,25 @@ footer .copy{
     .pc{display: block;}
     .m{display: none;}
     header{
-        max-width: 2000px;
+        max-width: 1500px;
         margin: 0 auto;
-        height: 100px;
+        height: 80px;
     }
     header h1{
         order: 1;
     }
     header h1 a img{
-        width: 280px;
+        width: 220px;
     }
     header .util{
         order: 3;
         padding: 10px;
     }
     header .util span{
-        font-size: 30px;
-        color: rgb(71, 39, 29);
-        font-weight: 500;
-        padding-left: 8px;
+        font-size: 24px;
+        color: rgb(109, 104, 103);
+        font-weight: 300;
+        padding-left: 5px;
     }
     header .btn-menu{display: none;}
     header nav .top{display: none;}
@@ -527,7 +527,7 @@ footer .copy{
     header nav{
         position: absolute;
         top: 0;
-        left: 400px;
+        left: 300px;
         width: unset;
         height: unset;
         background-color: unset;
@@ -540,18 +540,17 @@ footer .copy{
 
     header nav > ul{
         display: flex;
-        width: 200px;
-        padding: 10px;
-        padding-bottom: 14px;
+        padding: 0;
+        /* padding-bottom: 14px; */
         text-align: center;
         background-image: unset;
     }
     header nav > ul > li > a{
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 400;
         display: block;   
-        width: 220px;
-        height: 90px;
+        width: 170px;
+        height: 80px;
         padding-left: unset;    
         margin: unset;
         margin-top: unset;
@@ -559,6 +558,8 @@ footer .copy{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-right: 0;
+        text-align: center;
     }
     header nav > ul > li:hover > a,
     header nav > ul > li > a:focus{
@@ -566,8 +567,8 @@ footer .copy{
     }
     header nav > ul .sub{
         position: absolute;
-        width: 220px;
-        /* height: 700px; */
+        width: 170px;
+        height: 260px;
         display: none;
         color: #000000;
     }
@@ -576,8 +577,7 @@ footer .copy{
     }
     header nav ul .sub li a{
         display: block;
-        font-size: 18px;
-        padding: 24px 20px;
+        font-size: 14px;
         overflow: visible;
     }
     header nav ul .sub li a:hover,
@@ -591,10 +591,10 @@ footer .copy{
         position: absolute;
         left: 0;
         right: 0;
-        top: 100px;
+        top: 80px;
         background-color: #ffffffd0;
         width: 100vw;
-        height: 300px;
+        height: 270px;
         z-index: 40;
         display: none;
         box-sizing: border-box;
@@ -604,14 +604,14 @@ footer .copy{
 
 
     .slide{
-        height: 900px;
+        height: 600px;
         margin: 0 auto;
     }
     .slide ul{
-        height: 900px;
+        height: 600px;
     }
     .slide ul li{
-        height: 900px;
+        height: 600px;
     }
    .slide ul .s1{
         background-image: url(../images/slide1_pc.jpg);
@@ -624,26 +624,27 @@ footer .copy{
         background-position: bottom 100px;
    }
    .slide ul li .text{
-        bottom: 410px;
+        bottom: 280px;
         left: 18%;
-        font-size: 50px;
+        /* font-size: 40px; */
         font-weight: 600;
    }
    .slide ul li .text .p1{
-        font-size: 56px;
-   }
-   .slide ul li .text .p2{
         font-size: 44px;
    }
+   .slide ul li .text .p2{
+        font-size: 30px;
+   }
    .slide ul li button{
-        bottom: 340px;
+        bottom: 224px;
         left: 18%; 
         background-color: #252525c0;
         color: #ffffff;
         font-family: 'pretendard';
-        font-size: 20px;
+        font-size: 13px;
         font-weight: 500;
         border-radius: 50px;
+        height: 38px;
    }
    .slide ul .s1 button{
         padding: 12px 32px;
@@ -671,21 +672,19 @@ footer .copy{
         z-index: 10;
     }
     .slide .arrow img{
-        width: 30px;
+        width: 20px;
     }
     .contents{
         margin: 0 auto;
     }
     .contents .con1{
         width: 100%;
-        max-width: 2000px;
+        max-width: 1500px;
     }
     .contents .con1 h2{
         display: flex;
         align-items: center;
         padding-top: 80px;
-        padding-left: calc(10%);
-        
     }
     .contents .con1 h2 a{
         text-align: left;
@@ -695,9 +694,9 @@ footer .copy{
         padding: 0;
         background-color: rgba(73, 64, 64, 0.842);
         color: #ffffff;
-        font-size: 26px;
-        width: 240px;
-        height: 60px;
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -705,54 +704,70 @@ footer .copy{
     }
     .contents .con1 h2 a.pc{
         display: block;
-        width: calc(100% - 400px);
-        font-size: 19px;
+        width: calc(100% - 200px);
+        font-size: 15px;
         font-family: 'pretendard';
         font-weight: lighter;
-        color: rgb(75, 67, 67);
+        color: rgb(153, 145, 145);
         border-bottom: 1px solid rgb(148, 153, 156);
-        padding: 28px 20px 8px;
+        padding: 22px 20px 8px;
     }
     .contents .con1 ul{
-        padding: 0 100px;
+        padding: 50px 0;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
         width: 100%;
     }
     .contents .con1 ul li a{
-        /* background-color: antiquewhite; */
+        /* background-color: beige; */
+        /* border-radius: 20px; */
+        margin: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
     }
     .contents .con1 ul li a .p1{
-        font-size: 24px;
+        font-size: 18px;
+        padding-top: 24px;
     }
     .contents .con1 ul li a .p2{
-        font-size: 18px;
+        font-size: 12px;
+        padding-top: 3px;
     }
     .contents .con1 ul li a img{
-        width: 560px;
+        width: 360px;
         margin: 0 auto;
+        background-color: rgba(253, 248, 238, 0.541);
+        box-shadow: 2px 2px 10px #d4d4d4dc;
+        border-radius: 50%;
     }
     .contents .con1{}
     .contents .con2{
-        height: 800px;
+        height: 500px;
     }
     .contents .con2 .box{
         height: 100%;
-        background-image: url(../images/staff_brewing0.jpg);
+        background-image: url(../images/staff_clap.jpg);
         background-position: center;
     }
+    .contents .con2 .text{
+        top: 45%;
+    }
     .contents .con2 .text h2{
-        font-size: 100px;
-        letter-spacing: 4px;
+        font-size: 58px;
+        /* letter-spacing: 4px; */
+        font-family: 'pretendard';
         
     }
     .contents .con2 .text p{
-        font-size: 36px;
+        font-size: 20px;
         padding: 10px 0;
-        letter-spacing: 1px;
+        /* letter-spacing: 1px; */
+        font-family: 'pretendard';
     }
     .contents .con2 button{
-        width: 360px;
-        height: 100px;
-        font-size: 34px;
+        width: 140px;
+        height: 44px;
+        font-size: 15px;
+        margin-top: 15px;
     }
 }

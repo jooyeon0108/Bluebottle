@@ -16,7 +16,7 @@ $(document).ready(function(){
             $('nav>ul>li').off('click focusin focusout');
 
             // nav 기본상태 설정
-            $('nav').css({left: "400px"}); 
+            $('nav').css({left: "300px"}); 
 
             // pc 전용 마우스 이벤트 추가
             $('nav>ul>li').off('mouseover mouseout') // 이벤트 중복 방지를 위해 기존 이벤트 해제
