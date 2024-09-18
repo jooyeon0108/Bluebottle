@@ -36,16 +36,19 @@ img{
     max-width: 100%;
     display: block;
 }
-/**/
+/* reset 끝 */
+
+
 /* mobile */
 .pc{display: none;}
 #wrapper{
     position: relative;
     width: 100%;
-    overflow: hidden; /* 중요!! 
+    overflow: hidden; 
+    /* 중요!! 
     /* overflow: hidden이 기본적으로 넘친 부분을 잘라내는 역할을 하지만, 
     특정 상황에서는 레이아웃이 다시 계산되면서 콘텐츠가 화면 크기에 맞게 적절히 배치되거나 
-    정리될 수 있습니다. 이로 인해 nav가 화면 안에 맞게 차게 된 현상이 발생한 것입니다. */
+    정리될 수 있다. 이로 인해 nav가 화면 안에 맞게 차게 된 현상이 발생한 것. */
     
 }
 header{
@@ -108,7 +111,6 @@ header nav{
 }
 header nav .top{
     height: 74px;
-    /* background-color: aqua; */
 }
 header nav .bottom img{
     width: 100px;
@@ -149,17 +151,14 @@ header nav .top .btn-cls::after{
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 header nav > ul{
     width: 100%;
     text-align: left;
     font-family: 'pretendard';
 }
 header nav > ul > li{
-    /* width: 100%; */
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    /* text-align: center; */
 }
 header nav > ul > li > a{
     font-size: 20px;
@@ -187,8 +186,6 @@ header nav ul .sub li a:hover,
 header nav ul .sub li a:focus{
     color: rgb(6, 93, 255);
 }
-
-
 .slide{
     width: 100%;
     height: 500px;
@@ -204,7 +201,7 @@ header nav ul .sub li a:focus{
     top: 0;
     display: flex;
 }
-.slide ul li{
+.slide ul li{ 
     width: 100%;
     height: 500px;
     position: relative;
@@ -229,8 +226,8 @@ header nav ul .sub li a:focus{
 }
 .slide ul li .text{
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 70px;
+    left: 28px;
     color: #fff;
     font-family: 'pretendard';
     font-size: 30px;
@@ -241,22 +238,24 @@ header nav ul .sub li a:focus{
 }
 .slide ul li button{
     position: absolute;
-    bottom: 110px;
+    bottom: 20px;
     left: 30px; 
-    background-color: #ffffffc0;
+    background-color: #ffffffc2;
+    /* background: linear-gradient(to bottom, #ffffff, #cecccc); */
     font-family: 'Freesentation-9Black';
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
-    color: rgb(105, 104, 101);
+    color: rgb(90, 89, 89);
+    /* border-radius: 20px; */
 }
 .slide ul .s1 button{
     padding: 8px 58px;
 }
 .slide ul .s2 button{
-    padding: 8px 62px;
+    padding: 8px 58px;
 }
 .slide ul .s3 button{
-    padding: 8px 62px;
+    padding: 8px 60px;
 }
 .slide .arrow-left{
     position: absolute;
@@ -275,7 +274,7 @@ header nav ul .sub li a:focus{
     z-index: 10;
 }
 .slide .arrow img{
-    width: 24px;
+    width: 18px;
 }
 .contents{
     margin-top: 30px;
@@ -299,16 +298,19 @@ header nav ul .sub li a:focus{
     text-align: center;
 }
 .contents .con1 ul li a{
-    display: block;
+    /* display: block; */
     font-family: 'pretendard';
     color: gray;
     padding: 10px;
+    width: 100%;
 }
 .contents .con1 h2 a.pc{display: none;}
+.contents .con1 ul li a .text{
+    width: 100%;
+}
 .contents .con1 ul li a .p1{
     font-size: 16px;
     font-weight: 300;
-    padding-bottom: 3px;
 }
 .contents .con1 ul li a .p2{
     font-size: 12px;
@@ -318,10 +320,44 @@ header nav ul .sub li a:focus{
 .contents .con1 ul li a img{
     width: 600px;
 }
+.contents .con1 .btn-plus{
+    width: 65px;
+    height: 65px;
+    margin: 50px auto;
+    font-size: 0;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px #bebdbd; 
+    background: linear-gradient(145deg, #ffffff, #cecccc ); /* 입체감을 강화하는 그림자*/
+}
+.contents .con1 .btn-plus::before{
+    content: '';
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffffb7;
+    margin: 0 auto;
+    transform: translateY(2px);
+    border-radius: 10px;
+}
+.contents .con1 .btn-plus::after{
+    content: '';
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffffc4;
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(90deg); /* y값 이동 먼저.*/
+    border-radius: 10px;
+}
+.contents .con1 .btn-plus:hover{
+    transform: translateY(-2px);
+}
+
 .contents .con2{
     width: 100vw;
     height: 300px;
-    margin-top: 50px;
+    margin-top: 30px;
     position: relative;
     font-family: 'pretendard';
 }
@@ -351,7 +387,6 @@ header nav ul .sub li a:focus{
     padding: 10px;
     text-wrap: nowrap;
 }
-
 .contents .con2 button{
     font-family: 'pretendard';
     color: #2e2e2e;
@@ -370,12 +405,37 @@ header nav ul .sub li a:focus{
     top: 59.5%;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
 }
-
-
 .contents .con3{
-    height: 500px; 
-    background-color: rgb(255, 235, 197);
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-family: 'pretendard';
 }
+.contents .con3 h2{
+    text-align: center;
+}
+.contents .con3 .box{
+    padding: 20px;
+}
+.contents .con3 .box .text{
+    text-align: center;
+}
+.contents .con3 .box .text .p1{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+    color: #635757;
+}
+.contents .con3 .box .text .p2{
+    font-size: 14px;
+    color: #8a8989;
+}
+.contents .con3 .box1{
+    margin-bottom: 20px;
+}
+
+
+
 footer{
     height: 100px;
     background-color: #dddddd;
@@ -396,7 +456,7 @@ footer .copy{
 }
 
 
-@media (min-width: 666px){ /* pc에서 창 켰을때 가장 작은 width + 태블릿 */
+@media (min-width: 666px){ /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
     #wrapper{
         width: 100%;
     }
@@ -432,7 +492,6 @@ footer .copy{
     header nav > ul > li > a{
         font-size: 36px;
     }
-    
     header nav ul .sub li a{
         font-size: 22px;
         padding: 24px;
@@ -441,7 +500,6 @@ footer .copy{
         width: 120px;
         right: -20px;
     }
-    
     header .util span{
         font-size: 28px;
     }
@@ -466,6 +524,10 @@ footer .copy{
         font-size: 15px;
     }
     .contents .con2{
+        height: 600px;
+        background-color: pink;
+    }
+    .contents .con2{
         height: 400px;
     }
     .contents .con2 .box{
@@ -486,16 +548,10 @@ footer .copy{
         font-size: 24px;
         margin-top: 20px;
     }
-    .contents .con3{
-        height: 600px;
-        background-color: pink;
-    }
+    
 }
 
 
-
-    
- 
 @media (min-width: 1200px){  /* pc */
     .pc{display: block;}
     .m{display: none;}
@@ -537,11 +593,9 @@ footer .copy{
     header nav .top{
         height: unset;
     }
-
     header nav > ul{
         display: flex;
         padding: 0;
-        /* padding-bottom: 14px; */
         text-align: center;
         background-image: unset;
     }
@@ -599,10 +653,6 @@ footer .copy{
         display: none;
         box-sizing: border-box;
     }
-
-
-
-
     .slide{
         height: 600px;
         margin: 0 auto;
@@ -626,7 +676,6 @@ footer .copy{
    .slide ul li .text{
         bottom: 280px;
         left: 18%;
-        /* font-size: 40px; */
         font-weight: 600;
    }
    .slide ul li .text .p1{
@@ -638,13 +687,15 @@ footer .copy{
    .slide ul li button{
         bottom: 224px;
         left: 18%; 
-        background-color: #252525c0;
         color: #ffffff;
         font-family: 'pretendard';
         font-size: 13px;
         font-weight: 500;
         border-radius: 50px;
         height: 38px;
+        background: unset;
+        background-color: #252525c0;
+
    }
    .slide ul .s1 button{
         padding: 12px 32px;
@@ -659,7 +710,7 @@ footer .copy{
         position: absolute;
         background-color: #00000000;
         top: 50%;
-        left: 10%;
+        left: 12%;
         transform: translate(-10%, -50%);
         z-index: 10;
     }
@@ -667,24 +718,25 @@ footer .copy{
         position: absolute;
         background-color: #00000000;
         top: 50%;
-        right: 10%;
+        right: 12%;
         transform: translate(-10%, -50%);
         z-index: 10;
     }
     .slide .arrow img{
-        width: 20px;
+        width: 18px;
     }
     .contents{
         margin: 0 auto;
+        padding-top: 80px;
     }
     .contents .con1{
         width: 100%;
         max-width: 1500px;
+        position: relative;
     }
     .contents .con1 h2{
         display: flex;
         align-items: center;
-        padding-top: 80px;
     }
     .contents .con1 h2 a{
         text-align: left;
@@ -697,7 +749,7 @@ footer .copy{
         font-size: 18px;
         width: 200px;
         height: 50px;
-        display: flex;
+        display: flex; /* 가운데로 정렬 */
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -712,35 +764,55 @@ footer .copy{
         border-bottom: 1px solid rgb(148, 153, 156);
         padding: 22px 20px 8px;
     }
+    .contents .con1 .more{   /* 전체보기 버튼*/
+        position: absolute;
+        display: block;
+        right: 18px;
+        top: 35px;
+        color: rgb(148, 153, 156);
+        font-family: 'pretendard';
+        font-size: 14px;
+    }
     .contents .con1 ul{
         padding: 50px 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
-        width: 100%;
     }
     .contents .con1 ul li a{
-        /* background-color: beige; */
-        /* border-radius: 20px; */
+        border-radius: 10%;
         margin: 20px;
         margin-bottom: 0;
         margin-top: 0;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 5px 5px 15px #b6b6b6;
+        display: block;
+        width: 300px;
+        padding: 0;
     }
-    .contents .con1 ul li a .p1{
+    .contents .con1 ul li a .text{
+        padding: 50px;
+    }
+    .contents .con1 ul li a .text .p1{
         font-size: 18px;
-        padding-top: 24px;
     }
-    .contents .con1 ul li a .p2{
-        font-size: 12px;
-        padding-top: 3px;
+    .contents .con1 ul li a .text .p2{
+        font-size: 13px;
+        padding-top: 5px;
+        color: #b6b6b6;
     }
-    .contents .con1 ul li a img{
-        width: 360px;
-        margin: 0 auto;
-        background-color: rgba(253, 248, 238, 0.541);
-        box-shadow: 2px 2px 10px #d4d4d4dc;
-        border-radius: 50%;
+    .contents .con1 ul li a .photo{
+        width: 300px;
+        height: 280px;
+        overflow: hidden;
     }
-    .contents .con1{}
+    .contents .con1 ul li a .photo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10% 10% 0 0;
+        background-color: #f8f8f1;
+    }
+    .contents .con1 .btn-plus{display: none;} /* 모바일 버전 더보기 플러스 버튼*/
     .contents .con2{
         height: 500px;
     }
@@ -754,14 +826,11 @@ footer .copy{
     }
     .contents .con2 .text h2{
         font-size: 58px;
-        /* letter-spacing: 4px; */
         font-family: 'pretendard';
-        
     }
     .contents .con2 .text p{
         font-size: 20px;
         padding: 10px 0;
-        /* letter-spacing: 1px; */
         font-family: 'pretendard';
     }
     .contents .con2 button{
@@ -770,4 +839,74 @@ footer .copy{
         font-size: 15px;
         margin-top: 15px;
     }
+    .contents .con3{
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .contents .con3 h2{
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .contents .con3 h2 a:nth-child(1){
+        padding-bottom: 10px;
+        display: block;
+        font-size: 25px;
+        color: #796a6a;
+        text-align: left;
+        padding-left: 20px;
+        border-radius: 20px 20px 0 0;
+        padding: 0;
+        background-color: rgba(73, 64, 64, 0.842);
+        color: #ffffff;
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
+        display: flex; /* 가운데로 정렬 */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contents .con3 h2::after{
+        content: '';
+        display: block;
+        width: calc(100% - 200px);
+        border-bottom: 1px solid rgb(148, 153, 156);
+        padding: 22px 20px 8px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .contents .con3 .more{   /* 전체보기 버튼*/
+        position: absolute;
+        display: block;
+        right: 18px;
+        top: 28px;
+        color: rgb(148, 153, 156);
+        font-family: 'pretendard';
+        font-size: 14px;
+    }
+    .contents .con3 .box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .contents .con3 .box .text .p1{
+        font-size: 28px;
+        font-weight: 500;
+        color: #4d4b4b;
+    }
+    .contents .con3 .box .text .p2{
+        font-size: 16px;
+        color: #8a8989;
+    }
+    .contents .con3 .box1{
+        margin-bottom: 0;
+    }
+    .contents .con3 .box2 .photo{
+        order: 2;
+    }
+    .contents .con3 .box2 .text{
+        order: 1;
+    }
+
 }

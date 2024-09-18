@@ -1,11 +1,21 @@
 $(document).ready(function(){
-    checkWindowSize();
 
+    // 슬라이드
+    function slide(){
+        $('.slide ul').animate({left: "-100%"},1300,function(){
+            $('.slide ul').append($('.slide ul li').first());
+            $('.slide ul').css({left: 0});
+        })
+    }
+    setInterval(slide, 3800)
+
+
+    // 반응형 
+    checkWindowSize();
     $(window).resize(function(){
         checkWindowSize();        
     });
 
-    
     function checkWindowSize(){
         var windowWidth = $(window).width();
 
@@ -24,8 +34,7 @@ $(document).ready(function(){
                     $('.sub, .menubg').stop().slideDown();
                 }).on('mouseout', function(){
                     $('.sub, .menubg').stop().slideUp();
-                })                     
-            
+                })   
         } else {
             // mobile + tablet
             // pc에서 설정한 마우스 이벤트 제거
@@ -35,10 +44,10 @@ $(document).ready(function(){
             $('nav').css({left: "-100%"});
 
             // 모바일 메뉴 열기/닫기 애니메이션
-            $('.btn-menu').click(function(){
+            $('.btn-menu').off('click').on('click', function(){
                 $('nav').animate({left: 0});
             });
-            $('.btn-cls').click(function(){
+            $('.btn-cls').off('click').on('click', function(){
                 $('nav').animate({left: "-100%"});
             });
              // 포커스
@@ -50,9 +59,9 @@ $(document).ready(function(){
             })
 
 
-            $('nav>ul>li').click(function(){
+            $('nav>ul>li').off('click').on('click', function(){
                 // 클릭한 메뉴의 서브 메뉴만 슬라이드 토글(펼치거나 숨김) 
-                $(this).find('.sub').stop().slideDown();
+                $(this).find('.sub').stop().slideToggle();
                 // 다른 서브 메뉴를 모드 슬라이드 업(숨김)
                 $(this).siblings().find('.sub').stop().slideUp();                
             })
@@ -65,23 +74,8 @@ $(document).ready(function(){
                 $(this).find('.sub').stop().slideUp();
             })
 
-
-            // 웹접근성 (tab + 스크린 리더) : 모바일 메뉴 
-
         }
     }
-
-   
-    // 슬라이드
-    function slide(){
-        $('.slide ul').animate({left: "-100%"},1000,function(){
-            $('.slide ul').append($('.slide ul li').first());
-            $('.slide ul').css({left: 0});
-        })
-    }
-    setInterval(slide, 3000)
-    
-    
 
 });
 
