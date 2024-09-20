@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'pretendard';
 }
 *::before, *::after{
     box-sizing: border-box;
@@ -154,7 +155,6 @@ header nav .top .btn-cls::after{
 header nav > ul{
     width: 100%;
     text-align: left;
-    font-family: 'pretendard';
 }
 header nav > ul > li{
     margin: 0 auto;
@@ -189,7 +189,6 @@ header nav ul .sub li a:focus{
 .slide{
     width: 100%;
     height: 500px;
-    /* min-width: 500px; */
     overflow: hidden;
     position: relative;
 }
@@ -229,7 +228,6 @@ header nav ul .sub li a:focus{
     bottom: 70px;
     left: 28px;
     color: #fff;
-    font-family: 'pretendard';
     font-size: 30px;
     font-weight: bold;
 }
@@ -241,12 +239,10 @@ header nav ul .sub li a:focus{
     bottom: 20px;
     left: 30px; 
     background-color: #ffffffc2;
-    /* background: linear-gradient(to bottom, #ffffff, #cecccc); */
     font-family: 'Freesentation-9Black';
     font-size: 17px;
     font-weight: 300;
     color: rgb(90, 89, 89);
-    /* border-radius: 20px; */
 }
 .slide ul .s1 button{
     padding: 8px 58px;
@@ -289,7 +285,7 @@ header nav ul .sub li a:focus{
     padding: 30px 20px 10px;
     font-family: '나눔고딕';
     color: rgb(161, 131, 131);
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 }
 .contents .con1 ul{
@@ -298,8 +294,6 @@ header nav ul .sub li a:focus{
     text-align: center;
 }
 .contents .con1 ul li a{
-    /* display: block; */
-    font-family: 'pretendard';
     color: gray;
     padding: 10px;
     width: 100%;
@@ -321,14 +315,14 @@ header nav ul .sub li a:focus{
     width: 600px;
 }
 .contents .con1 .btn-plus{
-    width: 65px;
-    height: 65px;
-    margin: 50px auto;
+    width: 60px;
+    height: 60px;
+    margin: 30px auto;
     font-size: 0;
     display: block;
     border-radius: 50%;
     box-shadow: 2px 4px 6px #bebdbd; 
-    background: linear-gradient(145deg, #ffffff, #cecccc ); /* 입체감을 강화하는 그림자*/
+    background: linear-gradient(145deg, #f1f1f1, #c7c4c4 ); /* 입체감을 강화하는 그림자*/
 }
 .contents .con1 .btn-plus::before{
     content: '';
@@ -359,16 +353,14 @@ header nav ul .sub li a:focus{
     height: 300px;
     margin-top: 30px;
     position: relative;
-    font-family: 'pretendard';
 }
 .contents .con2 .box{
     width: 100%;
     height: 300px;
-    background-image: url(../images/staff_brewing0.jpg);
+    background-image: url(../images/staffs_working2.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 .contents .con2 .text{
     position: absolute;
@@ -388,7 +380,6 @@ header nav ul .sub li a:focus{
     text-wrap: nowrap;
 }
 .contents .con2 button{
-    font-family: 'pretendard';
     color: #2e2e2e;
     width: 110px;
     height: 36px;
@@ -407,18 +398,18 @@ header nav ul .sub li a:focus{
 }
 .contents .con3{
     max-width: 1500px;
-    margin: 0 auto;
-    margin-top: 80px;
-    font-family: 'pretendard';
+    margin: 70px auto;
 }
 .contents .con3 h2{
     text-align: center;
+    color: #796a6a;
 }
 .contents .con3 .box{
     padding: 20px;
 }
 .contents .con3 .box .text{
     text-align: center;
+    padding-top: 10px;
 }
 .contents .con3 .box .text .p1{
     font-size: 20px;
@@ -433,19 +424,19 @@ header nav ul .sub li a:focus{
 .contents .con3 .box1{
     margin-bottom: 20px;
 }
-
+.contents .con3 .box img{
+    width: 100%;
+}
 
 
 footer{
-    height: 500px;
-    background-color: #424242;
-    /* text-align: center; */
-    color: #ffffff;
-    font-family: 'pretendard';
-    font-weight: lighter;
+    width: 100%;
+    background-color: #d6d6d8;
+    color: #525151;
+    padding: 20px 0;
 }
 footer .logo{
-    padding: 30px 0 15px;
+    padding-bottom: 8px;
 }
 footer .logo img{
     width: 240px;
@@ -454,15 +445,13 @@ footer .logo img{
 footer .sns{
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 16px;
 }
 footer .sns li a{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -483,41 +472,29 @@ footer .sns li:nth-child(3) a{
 footer .sns li:nth-child(3) a img{
     width: 13px;
 }
-footer .text{
-    padding: 20px;
+
+footer .others{
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    padding-top: 12px;
 }
-footer .text p{
-    padding-bottom: 20px;
-    font-size: 15px;
-    text-align: center;
-}
-footer .text ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-footer .text ul li{
-    font-size: 13px;
-    padding-bottom: 2px;
-}
-footer .text ul li:nth-child(1),
-footer .text ul li:nth-child(3){
-    /* text-align: end; */
-}
-footer .text ul li:nth-child(1)::after,
-footer .text ul li:nth-child(3)::after{
+footer .others li::after{
     content: '|';
-    padding: 8px;
+    padding: 0 4px;
+    color: #9c9c9c;
+}
+footer .others li:last-child::after{
+    content: none;
+}
+footer .copy{
     font-size: 12px;
-    color: rgb(190, 188, 188);
-}
-footer .text ul li:nth-child(2),
-footer .text ul li:nth-child(4){
-}
-footer .text ul li:nth-child(5),
-footer .text ul li:nth-child(6){
-    grid-column: 1 / span 2;
+    color: rgb(151, 150, 150);
     text-align: center;
 }
+
+
+
 
 
 @media (min-width: 666px){ /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
@@ -848,7 +825,7 @@ footer .text ul li:nth-child(6){
         margin-bottom: 0;
         margin-top: 0;
         background-color: rgb(255, 255, 255);
-        box-shadow: 5px 5px 15px #b6b6b6;
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         display: block;
         width: 300px;
         padding: 0;
@@ -884,6 +861,8 @@ footer .text ul li:nth-child(6){
         height: 100%;
         background-image: url(../images/staff_clap.jpg);
         background-position: center;
+        background-attachment: fixed;
+
     }
     .contents .con2 .text{
         top: 45%;
