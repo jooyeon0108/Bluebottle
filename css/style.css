@@ -50,7 +50,6 @@ img{
     /* overflow: hidden이 기본적으로 넘친 부분을 잘라내는 역할을 하지만, 
     특정 상황에서는 레이아웃이 다시 계산되면서 콘텐츠가 화면 크기에 맞게 적절히 배치되거나 
     정리될 수 있다. 이로 인해 nav가 화면 안에 맞게 차게 된 현상이 발생한 것. */
-    
 }
 header{
     width: 100%;
@@ -171,7 +170,6 @@ header nav > ul > li:hover > a,
 header nav > ul > li > a:focus{
     color: rgb(21, 161, 255);
 }
-
 header nav > ul .sub{
     display: none;
 }
@@ -347,7 +345,6 @@ header nav ul .sub li a:focus{
 .contents .con1 .btn-plus:hover{
     transform: translateY(-2px);
 }
-
 .contents .con2{
     width: 100vw;
     height: 300px;
@@ -589,7 +586,6 @@ footer .copy{
         font-size: 24px;
         margin-top: 20px;
     }
-    
 }
 
 
@@ -951,5 +947,4 @@ footer .copy{
     .contents .con3 .box2 .text{
         order: 1;
     }
-
 }
