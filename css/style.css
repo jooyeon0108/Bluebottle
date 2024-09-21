@@ -46,7 +46,7 @@ img{
     position: relative;
     width: 100%;
     overflow: hidden; 
-    /* 중요!! 
+    /* 중요!! */
     /* overflow: hidden이 기본적으로 넘친 부분을 잘라내는 역할을 하지만, 
     특정 상황에서는 레이아웃이 다시 계산되면서 콘텐츠가 화면 크기에 맞게 적절히 배치되거나 
     정리될 수 있다. 이로 인해 nav가 화면 안에 맞게 차게 된 현상이 발생한 것. */
@@ -57,8 +57,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     background-color: #fff;
+    position: relative;
 }
 header h1{
     order: 2;
@@ -108,15 +108,10 @@ header nav{
     height: 100%;
     z-index: 50;
     background-color: #ffffff;
+    transition: left 0.5s;
 }
 header nav .top{
     height: 74px;
-}
-header nav .bottom img{
-    width: 100px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
 }
 header nav .top .btn-cls{
     font-size: 0;
@@ -151,6 +146,12 @@ header nav .top .btn-cls::after{
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+header nav .bottom img{
+    width: 80px;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+}
 header nav > ul{
     width: 100%;
     text-align: left;
@@ -184,55 +185,50 @@ header nav ul .sub li a:hover,
 header nav ul .sub li a:focus{
     color: rgb(6, 93, 255);
 }
-.slide{
+.swiper{
     width: 100%;
-    height: 500px;
+    height: 600px;
+}
+.swiper .swiper-wrapper{
+    width: 100%;
+    height: 600px;
+}
+.swiper .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 600px;
     overflow: hidden;
-    position: relative;
 }
-.slide ul{
-    width: 300%;
-    height: 500px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
+.swiper .swiper-wrapper .s1{
+    background-image: url(../images/slide2_pc.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
-.slide ul li{ 
-    width: 100%;
-    height: 500px;
-    position: relative;
-}
-.slide ul .s1{
+.swiper .swiper-wrapper .s2{
     background-image: url(../images/slide1_m.png);
+
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
 }
-.slide ul .s2{
-    background-image: url(../images/slide2_m.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.slide ul .s3{
+.swiper .swiper-wrapper .s3{
     background-image: url(../images/slide3_m.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
 }
-.slide ul li .text{
+.swiper .swiper-wrapper .swiper-slide .text{
     position: absolute;
-    bottom: 70px;
-    left: 28px;
+    bottom: 64px;
+    left: 5%;
     color: #fff;
     font-size: 30px;
     font-weight: bold;
 }
-.slide ul li .text .p1{
+.swiper .swiper-wrapper .swiper-slide .text .p1{
     padding-bottom: 1px;
 }
-.slide ul li button{
+.swiper .swiper-wrapper .swiper-slide button{
     position: absolute;
     bottom: 20px;
     left: 30px; 
@@ -242,33 +238,31 @@ header nav ul .sub li a:focus{
     font-weight: 300;
     color: rgb(90, 89, 89);
 }
-.slide ul .s1 button{
+
+.swiper .swiper-wrapper .s1 button{
     padding: 8px 58px;
 }
-.slide ul .s2 button{
+.swiper .swiper-wrapper .s2 button{
     padding: 8px 58px;
 }
-.slide ul .s3 button{
+.swiper .swiper-wrapper .s3 button{
     padding: 8px 60px;
 }
-.slide .arrow-left{
-    position: absolute;
-    background-color: #00000000;
-    top: 50%;
-    left: 2%;
-    transform: translate(-2%, -50%);
-    z-index: 10;
+
+:root{
+    --swiper-pagination-color: rgba(255, 255, 255, 0.767);
+    --swiper-pagination-bullet-size: 24px;
+    --swiper-pagination-bullet-inactive-color: #000000;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bottom: 16px;
 }
-.slide .arrow-right{
-    position: absolute;
-    background-color: #00000000;
-    top: 50%;
-    right: 2%;
-    transform: translate(-2%, -50%);
-    z-index: 10;
+:root{
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-color: #ffffffd3;
 }
-.slide .arrow img{
-    width: 18px;
+.swiper-pagination{
+    text-align: right;
+    padding-right: 16px;
 }
 .contents{
     margin-top: 30px;
@@ -515,6 +509,9 @@ footer .copy{
         background-color:rgb(150, 147, 147);
         border-radius: 2px;
     }
+    header nav{
+        left: -100%;
+    }
     header nav .top{
         height: 100px;
     }
@@ -541,14 +538,18 @@ footer .copy{
     header .util span{
         font-size: 28px;
     }
-    .slide{
+    .swiper{
         height: 800px;
     }
-    .slide ul{
+    .swiper .swiper-wrapper{
         height: 800px;
     }
-    .slide ul li{
+    .swiper .swiper-wrapper .swiper-slide{
         height: 800px;
+    }
+    .swiper-pagination{
+        text-align: center;
+        padding-right: unset;
     }
     .contents .con1 h2 a{
         font-size: 26px;
@@ -690,38 +691,41 @@ footer .copy{
         display: none;
         box-sizing: border-box;
     }
-    .slide{
+    .swiper{
+        width: 100%;
         height: 600px;
         margin: 0 auto;
     }
-    .slide ul{
+    .swiper .swiper-wrapper{
+        width: 100%;
         height: 600px;
     }
-    .slide ul li{
+    .swiper .swiper-wrapper .swiper-slide{
+        width: 100%;
         height: 600px;
     }
-   .slide ul .s1{
+   .swiper .swiper-wrapper .s1{
         background-image: url(../images/slide1_pc.jpg);
    }
-   .slide ul .s2{
+   .swiper .swiper-wrapper .s2{
         background-image: url(../images/slide2_pc.png);
    }
-   .slide ul .s3{
+   .swiper .swiper-wrapper .s3{
         background-image: url(../images/slide3_pc.jpg);
         background-position: bottom 100px;
    }
-   .slide ul li .text{
+   .swiper .swiper-wrapper .swiper-slide .text{
         bottom: 280px;
         left: 18%;
         font-weight: 600;
    }
-   .slide ul li .text .p1{
+   .swiper .swiper-wrapper .swiper-slide .text .p1{
         font-size: 44px;
    }
-   .slide ul li .text .p2{
+   .swiper .swiper-wrapper .swiper-slide .text .p2{
         font-size: 30px;
    }
-   .slide ul li button{
+   .swiper .swiper-wrapper .swiper-slide button{
         bottom: 224px;
         left: 18%; 
         color: #ffffff;
@@ -734,34 +738,21 @@ footer .copy{
         background-color: #252525c0;
 
    }
-   .slide ul .s1 button{
+   .swiper .swiper-wrapper .s1 button{
         padding: 12px 32px;
    }
-   .slide ul .s2 button{
+   .swiper .swiper-wrapper .s2 button{
         padding: 12px 32px;
    }
-   .slide ul .s3 button{
+   .swiper .swiper-wrapper .s3 button{
         padding: 12px 32px;
    }
-   .slide .arrow-left{
-        position: absolute;
-        background-color: #00000000;
-        top: 50%;
-        left: 12%;
-        transform: translate(-10%, -50%);
-        z-index: 10;
-    }
-    .slide .arrow-right{
-        position: absolute;
-        background-color: #00000000;
-        top: 50%;
-        right: 12%;
-        transform: translate(-10%, -50%);
-        z-index: 10;
-    }
-    .slide .arrow img{
-        width: 18px;
-    }
+   .swiper-button-prev{
+    left: 10%;
+   }
+   .swiper-button-next{
+    right: 10%;
+   }
     .contents{
         margin: 0 auto;
         padding-top: 80px;
