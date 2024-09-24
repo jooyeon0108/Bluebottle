@@ -8,10 +8,10 @@ $(document).ready(function(){
         observeParents: true,
         loop: true,
         autoplay : {
-            delay: 2000,
+            delay: 3200,
             disableOnInteraction: false // 사용자 인터랙션 후에도 autoplay 재시작
         },
-        speed: 1200,
+        speed: 1000,
         
         // 페이지네이션 
         pagination: {   // 슬라이드 넘버
@@ -19,7 +19,10 @@ $(document).ready(function(){
           clickable: true
         },
 
-       
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
     });
 

@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'pretendard';
 }
 *::before, *::after{
     box-sizing: border-box;
@@ -149,7 +150,6 @@ header nav .top .btn-cls::after{
 header nav > ul{
     width: 100%;
     text-align: left;
-    font-family: 'pretendard';
 }
 header nav > ul > li{
     margin: 0 auto;
@@ -191,6 +191,8 @@ header nav .bottom img{
 .swiper{
     width: 100%;
     height: 600px;
+    padding: 14px;
+    padding-top: 0;
 }
 .swiper .swiper-wrapper{
     width: 100%;
@@ -200,104 +202,80 @@ header nav .bottom img{
     width: 100%;
     height: 600px;
     overflow: hidden;
+    position: relative;
 }
 .swiper .swiper-wrapper .s1{
-    background-image: url(../images/slide11.webp);
+    background-image: url(../images/D2C_Blog_news_NOLA_072224_1_7d785e9b-1a87-422a-ad66-563d5301efd4.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s2{
-    background-image: url(../images/slide2_m.png);
+    background-image: url(../images/slide3_m.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s3{
-    background-image: url(../images/slide3_m.png);
+    background-image: url(../images/slide1_m.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .swiper-slide .text{
     position: absolute;
-    bottom: 50%;
-    left: 5%;
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'pretendard';
-}
-.swiper .swiper-wrapper .swiper-slide .text .p1{
-    padding-bottom: 1px;
-}
-/* .swiper .swiper-wrapper .swiper-slide button{
-    position: absolute;
-    bottom: 42%;
-    left: 28px; 
-    font-weight: 500;
-    color: rgb(90, 89, 89);
-    background-color: #ffffffde;
-    font-family: 'pretendard';
-}
-.swiper .swiper-wrapper .s1 button{
-    padding: 8px 58px;
-}
-.swiper .swiper-wrapper .s2 button{
-    padding: 8px 58px;
-}
-.swiper .swiper-wrapper .s3 button{
-    padding: 8px 60px;
-} */
-.swiper .swiper-wrapper .swiper-slide button{
-    position: absolute;
-    bottom: 40%;
-    left: 4%; 
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -48%);
     color: #ffffff;
-    font-family: 'pretendard';
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 50px;
-    height: 38px;
-    background: unset;
-    background-color: #252525c0;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 10px #000000;
 
 }
-.swiper .swiper-wrapper .s1 button{
-    padding: 12px 32px;
+.swiper .swiper-wrapper .swiper-slide .text .p1{
+    font-size: 22px;
 }
-.swiper .swiper-wrapper .s2 button{
-    padding: 12px 32px;
+.swiper .swiper-wrapper .swiper-slide .text .p2{
+    font-size: 24px;
 }
-.swiper .swiper-wrapper .s3 button{
-    padding: 12px 32px;
+.swiper .swiper-wrapper .swiper-slide button{
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -56%); 
+    color: #333333;
+    font-size: 12px;
+    font-weight: 500;
+    height: 26px;
+    width: 100px;
+    background: unset;
+    background-color: #ffffffdc;
 }
 .swiper-pagination{
     text-align: center;
-    padding: 10px;
-}
-span.swiper-pagination-bullet{
-    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 .swiper-button-prev{
-    left: 3%;
+    left: 4%;
 }
 .swiper-button-next{
-    right: 3%;
+    right: 4%;
 }
-
+.swiper-pagination-bullet-inactive{
+    border: 1px solid #fff;
+}
 :root{
     --swiper-pagination-color: rgb(255, 255, 255);
-    --swiper-pagination-bullet-size: 30px;
-    --swiper-pagination-bullet-inactive-color: #0a0a0a;
-    --swiper-pagination-bullet-inactive-opacity: 0.6;
+    --swiper-pagination-bullet-size: 13px;
+    --swiper-pagination-bullet-inactive-color: rgb(20, 20, 20);
+    --swiper-pagination-bullet-inactive-opacity: 0.8;
     --swiper-pagination-bottom: 16px;
-    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
 }
 :root{
-    --swiper-navigation-size: 30px;
-    --swiper-navigation-color: #ffffffd3;
+    --swiper-navigation-size: 24px;
+    --swiper-navigation-color: #ffffffc9;
 }
 .contents{
     margin-top: 30px;
@@ -310,7 +288,6 @@ span.swiper-pagination-bullet{
 .contents .con1 h2 a{
     display: block;
     padding: 30px 20px 10px;
-    font-family: '나눔고딕';
     color: rgb(161, 131, 131);
     font-size: 20px;
     text-align: center;
@@ -322,7 +299,6 @@ span.swiper-pagination-bullet{
 }
 .contents .con1 ul li a{
     /* display: block; */
-    font-family: 'pretendard';
     color: gray;
     padding: 10px;
     width: 100%;
@@ -348,7 +324,6 @@ span.swiper-pagination-bullet{
     height: 300px;
     margin-top: 30px;
     position: relative;
-    font-family: 'pretendard';
 }
 .contents .con2 .box{
     width: 100%;
@@ -377,7 +352,6 @@ span.swiper-pagination-bullet{
     text-wrap: nowrap;
 }
 .contents .con2 button{
-    font-family: 'pretendard';
     color: #2e2e2e;
     width: 110px;
     height: 36px;
@@ -398,7 +372,6 @@ span.swiper-pagination-bullet{
     max-width: 1500px;
     margin: 0 auto;
     margin-top: 80px;
-    font-family: 'pretendard';
 }
 .contents .con3 h2{
     text-align: center;
@@ -440,7 +413,6 @@ footer .copy{
     font-size: 9px;
     text-align: center;
     padding: 0 20px 10px;
-    font-family: 'pretendard';
     color: rgb(114, 111, 111)
 }
 
@@ -499,13 +471,13 @@ footer .copy{
         font-size: 28px;
     }
     .swiper{
-        height: 800px;
+        height: 600px;
     }
     .swiper ul{
-        height: 800px;
+        height: 600px;
     }
     .swiper ul li{
-        height: 800px;
+        height: 600px;
     }
     .contents .con1 h2 a{
         font-size: 26px;
@@ -649,6 +621,7 @@ footer .copy{
     .swiper{
         height: 600px;
         margin: 0 auto;
+        padding: 0;
     }
     .swiper .swiper-wrapper{
         height: 600px;
@@ -657,47 +630,42 @@ footer .copy{
         height: 600px;
     }
    .swiper .swiper-wrapper .s1{
-        background-image: url(../images/slide1_pc.jpg);
+        /* background-image: url(../images/D2C_Blog_news_NOLA_080524_3.webp); */
    }
    .swiper .swiper-wrapper .s2{
-        background-image: url(../images/slide2_pc.png);
-   }
-   .swiper .swiper-wrapper .s3{
         background-image: url(../images/slide3_pc.jpg);
    }
+   .swiper .swiper-wrapper .s3{
+        background-image: url(../images/slide1_pc.jpg);
+   }
    .swiper .swiper-wrapper .swiper-slide .text{
-        bottom: 280px;
-        left: 18%;
+        top: 40%;
+        left: 20%;
         font-weight: 600;
    }
    .swiper .swiper-wrapper .swiper-slide .text .p1{
-        font-size: 44px;
-   }
-   .swiper .swiper-wrapper .swiper-slide .text .p2{
         font-size: 30px;
    }
+   .swiper .swiper-wrapper .swiper-slide .text .p2{
+        font-size: 36px;
+   }
    .swiper .swiper-wrapper .swiper-slide button{
-        bottom: 224px;
-        left: 18%; 
-        color: #ffffff;
-        font-family: 'pretendard';
-        font-size: 13px;
+        top: 57%;
+        left: 20%;
+        font-size: 12px;
         font-weight: 500;
-        border-radius: 50px;
-        height: 38px;
+        height: 26px;
+        width: 100px;
         background: unset;
-        background-color: #252525c0;
-
+        background-color: #ffffffc2;
+        
    }
-   .swiper .swiper-wrapper .s1 button{
-        padding: 12px 32px;
-   }
-   .swiper .swiper-wrapper .s2 button{
-        padding: 12px 32px;
-   }
-   .swiper .swiper-wrapper .s3 button{
-        padding: 12px 32px;
-   }
+   .swiper-button-prev{
+        left: 5%;
+    }
+    .swiper-button-next{
+        right: 5%;
+    }
    
    
     .contents{
@@ -733,7 +701,6 @@ footer .copy{
         display: block;
         width: calc(100% - 200px);
         font-size: 15px;
-        font-family: 'pretendard';
         font-weight: lighter;
         color: rgb(153, 145, 145);
         border-bottom: 1px solid rgb(148, 153, 156);
@@ -745,7 +712,6 @@ footer .copy{
         right: 18px;
         top: 35px;
         color: rgb(148, 153, 156);
-        font-family: 'pretendard';
         font-size: 14px;
     }
     .contents .con1 ul{
@@ -801,12 +767,10 @@ footer .copy{
     }
     .contents .con2 .text h2{
         font-size: 58px;
-        font-family: 'pretendard';
     }
     .contents .con2 .text p{
         font-size: 20px;
         padding: 10px 0;
-        font-family: 'pretendard';
     }
     .contents .con2 button{
         width: 140px;
@@ -857,7 +821,6 @@ footer .copy{
         right: 18px;
         top: 28px;
         color: rgb(148, 153, 156);
-        font-family: 'pretendard';
         font-size: 14px;
     }
     .contents .con3 .box{
