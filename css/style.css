@@ -15,7 +15,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'pretendard';
 }
 *::before, *::after{
     box-sizing: border-box;
@@ -45,20 +44,21 @@ img{
 #wrapper{
     position: relative;
     width: 100%;
+    height: 100%;
     overflow: hidden; 
-    /* 중요!! */
+    /* 중요!! 
     /* overflow: hidden이 기본적으로 넘친 부분을 잘라내는 역할을 하지만, 
     특정 상황에서는 레이아웃이 다시 계산되면서 콘텐츠가 화면 크기에 맞게 적절히 배치되거나 
     정리될 수 있다. 이로 인해 nav가 화면 안에 맞게 차게 된 현상이 발생한 것. */
 }
 header{
     width: 100%;
-    height: 70px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     position: relative;
+    background-color: #fff;
 }
 header h1{
     order: 2;
@@ -67,7 +67,7 @@ header h1 a{
     display: block;
 }
 header h1 a img{
-    width: 56px;
+    width: 60px;
     margin: 0 auto;
 }
 header .btn-menu{
@@ -103,12 +103,12 @@ header .menubg{display: none;}
 header nav{
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 50%;
+    left: -300px;
+    width: 300px;
     height: 100%;
-    z-index: 50;
     background-color: #ffffff;
-    transition: left 0.5s;
+    z-index: 50;
+    transition: left 0.6s;
 }
 header nav .top{
     height: 74px;
@@ -146,15 +146,10 @@ header nav .top .btn-cls::after{
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-header nav .bottom img{
-    width: 80px;
-    position: absolute;
-    bottom: 20px;
-    right: 0px;
-}
 header nav > ul{
     width: 100%;
     text-align: left;
+    font-family: 'pretendard';
 }
 header nav > ul > li{
     margin: 0 auto;
@@ -171,19 +166,27 @@ header nav > ul > li:hover > a,
 header nav > ul > li > a:focus{
     color: rgb(21, 161, 255);
 }
-header nav > ul .sub{
+
+header nav .sub{
     display: none;
+    padding: 10px;
 }
-header nav > ul .sub li a{
+header nav > ul > li .sub li a{
     display: block;
     width: 100%;
     padding: 20px;
     font-size: 14px;
     color: #000000;
 }
-header nav ul .sub li a:hover,
-header nav ul .sub li a:focus{
+header nav > ul > li .sub li a:hover,
+header nav > ul > li .sub li a:focus{
     color: rgb(6, 93, 255);
+}
+header nav .bottom img{
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 .swiper{
     width: 100%;
@@ -193,52 +196,50 @@ header nav ul .sub li a:focus{
     width: 100%;
     height: 600px;
 }
-.swiper .swiper-wrapper .swiper-slide{
+.swiper .swiper-wrapper .swiper-slide{ 
     width: 100%;
     height: 600px;
     overflow: hidden;
 }
 .swiper .swiper-wrapper .s1{
-    background-image: url(../images/slide2_pc.png);
+    background-image: url(../images/slide11.webp);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s2{
-    background-image: url(../images/slide1_m.png);
-
+    background-image: url(../images/slide2_m.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s3{
     background-image: url(../images/slide3_m.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .swiper-slide .text{
     position: absolute;
-    bottom: 64px;
+    bottom: 50%;
     left: 5%;
     color: #fff;
     font-size: 30px;
     font-weight: bold;
+    font-family: 'pretendard';
 }
 .swiper .swiper-wrapper .swiper-slide .text .p1{
     padding-bottom: 1px;
 }
-.swiper .swiper-wrapper .swiper-slide button{
+/* .swiper .swiper-wrapper .swiper-slide button{
     position: absolute;
-    bottom: 20px;
-    left: 30px; 
-    background-color: #ffffffc2;
-    font-family: 'Freesentation-9Black';
-    font-size: 17px;
-    font-weight: 300;
+    bottom: 42%;
+    left: 28px; 
+    font-weight: 500;
     color: rgb(90, 89, 89);
+    background-color: #ffffffde;
+    font-family: 'pretendard';
 }
-
 .swiper .swiper-wrapper .s1 button{
     padding: 8px 58px;
 }
@@ -247,22 +248,56 @@ header nav ul .sub li a:focus{
 }
 .swiper .swiper-wrapper .s3 button{
     padding: 8px 60px;
+} */
+.swiper .swiper-wrapper .swiper-slide button{
+    position: absolute;
+    bottom: 40%;
+    left: 4%; 
+    color: #ffffff;
+    font-family: 'pretendard';
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 50px;
+    height: 38px;
+    background: unset;
+    background-color: #252525c0;
+
+}
+.swiper .swiper-wrapper .s1 button{
+    padding: 12px 32px;
+}
+.swiper .swiper-wrapper .s2 button{
+    padding: 12px 32px;
+}
+.swiper .swiper-wrapper .s3 button{
+    padding: 12px 32px;
+}
+.swiper-pagination{
+    text-align: center;
+    padding: 10px;
+}
+span.swiper-pagination-bullet{
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.swiper-button-prev{
+    left: 3%;
+}
+.swiper-button-next{
+    right: 3%;
 }
 
 :root{
-    --swiper-pagination-color: rgba(255, 255, 255, 0.767);
-    --swiper-pagination-bullet-size: 24px;
-    --swiper-pagination-bullet-inactive-color: #000000;
-    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-color: rgb(255, 255, 255);
+    --swiper-pagination-bullet-size: 30px;
+    --swiper-pagination-bullet-inactive-color: #0a0a0a;
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
     --swiper-pagination-bottom: 16px;
+    --swiper-pagination-bullet-horizontal-gap: 8px;
 }
 :root{
     --swiper-navigation-size: 30px;
     --swiper-navigation-color: #ffffffd3;
-}
-.swiper-pagination{
-    text-align: right;
-    padding-right: 16px;
 }
 .contents{
     margin-top: 30px;
@@ -277,7 +312,7 @@ header nav ul .sub li a:focus{
     padding: 30px 20px 10px;
     font-family: '나눔고딕';
     color: rgb(161, 131, 131);
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
 }
 .contents .con1 ul{
@@ -286,6 +321,8 @@ header nav ul .sub li a:focus{
     text-align: center;
 }
 .contents .con1 ul li a{
+    /* display: block; */
+    font-family: 'pretendard';
     color: gray;
     padding: 10px;
     width: 100%;
@@ -306,52 +343,21 @@ header nav ul .sub li a:focus{
 .contents .con1 ul li a img{
     width: 600px;
 }
-.contents .con1 .btn-plus{
-    width: 60px;
-    height: 60px;
-    margin: 30px auto;
-    font-size: 0;
-    display: block;
-    border-radius: 50%;
-    box-shadow: 2px 4px 6px #bebdbd; 
-    background: linear-gradient(145deg, #f1f1f1, #c7c4c4 ); /* 입체감을 강화하는 그림자*/
-}
-.contents .con1 .btn-plus::before{
-    content: '';
-    display: block;
-    width: 28px;
-    height: 4px;
-    background-color: #ffffffb7;
-    margin: 0 auto;
-    transform: translateY(2px);
-    border-radius: 10px;
-}
-.contents .con1 .btn-plus::after{
-    content: '';
-    display: block;
-    width: 28px;
-    height: 4px;
-    background-color: #ffffffc4;
-    margin: 0 auto;
-    transform: translateY(-2px) rotate(90deg); /* y값 이동 먼저.*/
-    border-radius: 10px;
-}
-.contents .con1 .btn-plus:hover{
-    transform: translateY(-2px);
-}
 .contents .con2{
     width: 100vw;
     height: 300px;
     margin-top: 30px;
     position: relative;
+    font-family: 'pretendard';
 }
 .contents .con2 .box{
     width: 100%;
     height: 300px;
-    background-image: url(../images/staffs_working2.jpeg);
+    background-image: url(../images/staff_brewing0.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
 }
 .contents .con2 .text{
     position: absolute;
@@ -371,6 +377,7 @@ header nav ul .sub li a:focus{
     text-wrap: nowrap;
 }
 .contents .con2 button{
+    font-family: 'pretendard';
     color: #2e2e2e;
     width: 110px;
     height: 36px;
@@ -389,18 +396,18 @@ header nav ul .sub li a:focus{
 }
 .contents .con3{
     max-width: 1500px;
-    margin: 70px auto;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-family: 'pretendard';
 }
 .contents .con3 h2{
     text-align: center;
-    color: #796a6a;
 }
 .contents .con3 .box{
     padding: 20px;
 }
 .contents .con3 .box .text{
     text-align: center;
-    padding-top: 10px;
 }
 .contents .con3 .box .text .p1{
     font-size: 20px;
@@ -415,77 +422,27 @@ header nav ul .sub li a:focus{
 .contents .con3 .box1{
     margin-bottom: 20px;
 }
-.contents .con3 .box img{
-    width: 100%;
-}
+
 
 
 footer{
-    width: 100%;
-    background-color: #d6d6d8;
-    color: #525151;
-    padding: 20px 0;
+    height: 100px;
+    background-color: #dddddd;
 }
 footer .logo{
-    padding-bottom: 8px;
+    padding: 20px 0 10px;
 }
 footer .logo img{
-    width: 240px;
+    width: 160px;
     margin: 0 auto;
 }
-footer .sns{
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-footer .sns li a{
-    display: block;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-footer .sns li a img{
-    width: 10px;
-}
-footer .sns li:nth-child(1) a{
-    background-color: rgb(128, 127, 127);
-}
-footer .sns li:nth-child(2) a{
-    background-color: rgb(128, 127, 127);
-}
-footer .sns li:nth-child(3) a{
-    background-color: rgb(128, 127, 127);
-}
-footer .sns li:nth-child(3) a img{
-    width: 13px;
-}
-
-footer .others{
-    display: flex;
-    font-size: 14px;
-    justify-content: center;
-    padding-top: 12px;
-}
-footer .others li::after{
-    content: '|';
-    padding: 0 4px;
-    color: #9c9c9c;
-}
-footer .others li:last-child::after{
-    content: none;
-}
 footer .copy{
-    font-size: 12px;
-    color: rgb(151, 150, 150);
+    font-size: 9px;
     text-align: center;
+    padding: 0 20px 10px;
+    font-family: 'pretendard';
+    color: rgb(114, 111, 111)
 }
-
-
-
 
 
 @media (min-width: 666px){ /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
@@ -493,7 +450,7 @@ footer .copy{
         width: 100%;
     }
     header{
-        height: 70px;
+        height: 100px;
     }
     header h1 a img{
         width: 70px;
@@ -527,7 +484,10 @@ footer .copy{
     header nav > ul > li > a{
         font-size: 36px;
     }
-    header nav ul .sub li a{
+    header nav > ul > li .sub{
+        display: none;
+    }
+    header nav > ul > li .sub li a{
         font-size: 22px;
         padding: 24px;
     }
@@ -541,15 +501,11 @@ footer .copy{
     .swiper{
         height: 800px;
     }
-    .swiper .swiper-wrapper{
+    .swiper ul{
         height: 800px;
     }
-    .swiper .swiper-wrapper .swiper-slide{
+    .swiper ul li{
         height: 800px;
-    }
-    .swiper-pagination{
-        text-align: center;
-        padding-right: unset;
     }
     .contents .con1 h2 a{
         font-size: 26px;
@@ -587,6 +543,7 @@ footer .copy{
         font-size: 24px;
         margin-top: 20px;
     }
+    
 }
 
 
@@ -625,9 +582,10 @@ footer .copy{
         width: unset;
         height: unset;
         background-color: unset;
-        transition: unset;
+        transition: none;
         z-index: 50;
     }
+   
     header nav .top{
         height: unset;
     }
@@ -657,23 +615,20 @@ footer .copy{
     header nav > ul > li > a:focus{
         color: rgb(31, 142, 216);
     }
-    header nav > ul .sub{
+    header nav > ul > li .sub{
         position: absolute;
         width: 170px;
         height: 260px;
         display: none;
         color: #000000;
     }
-    header nav > ul .sub li{
-        display: block;
-    }
-    header nav ul .sub li a{
+    header nav > ul > li .sub li a{
         display: block;
         font-size: 14px;
         overflow: visible;
     }
-    header nav ul .sub li a:hover,
-    header nav ul .sub li a:focus{
+    header nav > ul > li .sub li a:hover,
+    header nav > ul > li .sub li a:focus{
         color: rgb(6, 120, 228);
     }
     header nav .bottom img{
@@ -692,16 +647,13 @@ footer .copy{
         box-sizing: border-box;
     }
     .swiper{
-        width: 100%;
         height: 600px;
         margin: 0 auto;
     }
     .swiper .swiper-wrapper{
-        width: 100%;
         height: 600px;
     }
     .swiper .swiper-wrapper .swiper-slide{
-        width: 100%;
         height: 600px;
     }
    .swiper .swiper-wrapper .s1{
@@ -712,7 +664,6 @@ footer .copy{
    }
    .swiper .swiper-wrapper .s3{
         background-image: url(../images/slide3_pc.jpg);
-        background-position: bottom 100px;
    }
    .swiper .swiper-wrapper .swiper-slide .text{
         bottom: 280px;
@@ -747,12 +698,8 @@ footer .copy{
    .swiper .swiper-wrapper .s3 button{
         padding: 12px 32px;
    }
-   .swiper-button-prev{
-    left: 10%;
-   }
-   .swiper-button-next{
-    right: 10%;
-   }
+   
+   
     .contents{
         margin: 0 auto;
         padding-top: 80px;
@@ -812,7 +759,7 @@ footer .copy{
         margin-bottom: 0;
         margin-top: 0;
         background-color: rgb(255, 255, 255);
-        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        box-shadow: 5px 5px 15px #b6b6b6;
         display: block;
         width: 300px;
         padding: 0;
@@ -848,8 +795,6 @@ footer .copy{
         height: 100%;
         background-image: url(../images/staff_clap.jpg);
         background-position: center;
-        background-attachment: fixed;
-
     }
     .contents .con2 .text{
         top: 45%;
@@ -938,4 +883,5 @@ footer .copy{
     .contents .con3 .box2 .text{
         order: 1;
     }
+
 }

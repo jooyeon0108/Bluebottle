@@ -13,7 +13,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-
     <script src="./js/script.js"></script>
 </head>
 <body>
@@ -90,75 +89,32 @@
                 </div><!--util-->
         </header>
         <div class="menubg"></div> <!-- pc버젼 서브메뉴 펼쳤을때 같이 나오는 뒷배경 -->
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide s1">
-                    <div class="text">
-                        <p class="p1">새로운 시그니처</p>
-                        <p class="p2">놀라 NOLA</p>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide s1">
+                        <div class="text">
+                            <p class="p1">IN BUSAN</p>
+                            <p class="p2">첫 오픈 예정</p>
+                        </div>
+                        <button type="button">click</button>
                     </div>
-                    <button type="button">자세히 보기</button>
+                    <div class="swiper-slide s2">
+                        <div class="text">
+                            <p class="p1">NEW 시그니처</p>
+                            <p class="p2">놀라 NOLA</p>
+                        </div>
+                        <button type="button">click</button>
+                    </div>
+                    <div class="swiper-slide s3">
+                        <div class="text">
+                            <p class="p1">새로운 콜라보</p>
+                            <p class="p2">굿즈 출시</p>
+                        </div>
+                        <button type="button">click</button>
+                    </div>
                 </div>
-                <div class="swiper-slide s2">
-                    <div class="text">
-                        <p class="p1">블루보틀 in 부산</p>
-                        <p class="p2">해운대 오픈 예정</p>
-                    </div>
-                    <button type="button">제품 보기</button>
-                </div>
-                <div class="swiper-slide s3">
-                    <div class="text">
-                        <p class="p1">블루보틀 콜라보</p>
-                        <p class="p2">신상품 굿즈 출시</p>
-                    </div>
-                    <button type="button">제품 보기</button>
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
-        </div>
-</body>
-        <!-- <div class="slide">
-            <div class="arrow-left arrow">
-                <img src="./images/btn_prev.png" alt="이전 슬라이드">
-            </div>
-            <ul>
-                <li class="s1">
-                    <div class="text">
-                        <p class="p1">블루보틀 in 부산</p>
-                        <p class="p2">해운대 오픈 예정</p>
-                    </div>
-                    <button type="button">자세히 보기</button>
-                </li>
-                <li class="s2">
-                    <div class="text">
-                        <p class="p1">새로운 시그니처</p>
-                        <p class="p2">놀라 NOLA</p>
-                    </div>
-                    <button type="button">제품 보기</button>
-                </li>
-                <li class="s3">
-                    <div class="text">
-                        <p class="p1">블루보틀 콜라보</p>
-                        <p class="p2">신상품 굿즈 출시</p>
-                    </div>
-                    <button type="button">제품 보기</button>
-                </li>
-            </ul>
-            <div class="arrow-right arrow">
-                <img src="./images/btn_next.png" alt="다음 슬라이드">
-            </div>
-        </div> -->
+                <div class="swiper-pagination"></div>
+            </div><!--swiper-->
         <div class="contents">
             <div class="con1">
                 <h2>
@@ -168,7 +124,7 @@
                 <button class="more pc">전체보기 ></button>
                 <ul>
                     <li >
-                        <a href="#">
+                        <a href="#" data-aos="flip-right" data-aos-duration="1500">
                             <div class="photo">
                                 <img src="./images/best_item1.jpg" alt="트래블 머그 텀블러 사진">
                             </div>
@@ -179,7 +135,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="300">
                             <div class="photo">
                                 <img src="./images/best_item2.jpg" alt="데이오프 텀블러 사진">
                             </div>
@@ -190,7 +146,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="500">
                             <div class="photo">
                                 <img src="./images/best_item3.webp" alt="밸리 에스프레소 사진">
                             </div>
@@ -201,7 +157,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="600">
                             <div class="photo">
                                 <img src="./images/best_item4.webp" alt="헤이즈 에스프레소 사진">
                             </div>
@@ -212,7 +168,6 @@
                         </a>
                     </li>
                 </ul>
-                <button class="btn-plus">글자입니다.</button>
             </div><!--con1-->
             <div class="con2">
                 <div class="box"></div><!-- 백그라운드 이미지 넣을 곳 -->
@@ -252,19 +207,11 @@
             </div>
         </div>
         <footer>
-            <div class="logo"><img src="./images/logo3.png" alt="블루보틀 로고"></div>
-            <ul class="sns">
-                <li><a href="#"><img src="./images/sns1.png" alt=""></a></li>
-                <li><a href="#"><img src="./images/sns2.png" alt=""></a></li>
-                <li><a href="#"><img src="./images/sns3.png" alt=""></a></li>
-            </ul>
-            <ul class="others">
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">환불정책</a></li>
-                <li><a href="#">문의사항</a></li>
-            </ul>
-            <p class="copy">© 2024 BLUE BOTTLE COFFEE INC., ALL RIGHTS RESERVED</p>
+            <div class="logo"><img src="./images/logo3.png" alt="블루보틀커피 로고"></div>
+            <div class="copy">
+                It is a long established fact that a reader will be distracted<br>by the readable content of a page when looking at its layout.<br>
+                Copyright 2024. leeminiclass All rights reserved
+            </div>
         </footer>
     </div><!--wrapper-->
         <script src="./js/aos.js"></script> <!-- 움직이는 효과 연결 -->
