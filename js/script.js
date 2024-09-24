@@ -23,12 +23,9 @@ $(document).ready(function(){
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
     });
 
-
-
-     // 반응형 
+     // 브레이크포인트  
      checkWindowSize();
      $(window).resize(function(){
          checkWindowSize();   
@@ -61,52 +58,48 @@ $(document).ready(function(){
              // pc에서는 nav가 항상 보이도록.
              $('nav').css({left: "300px"}); 
 
-             
- 
          } else {
              // mobile + tablet
-
+             
              // 모바일/태블릿 전환 시에도 Swiper autoplay가 멈추지 않도록 보장
              swiper.autoplay.start();
 
-             // pc에서 설정한 마우스 이벤트 제거
+             // pc 마우스 이벤트 제거
              $('nav>ul>li').off('mouseover mouseout');
  
              // nav 초기상태 설정
              $('nav').css({left: "-100%"});
  
-             // 모바일 메뉴 열기/닫기 
+             // 메뉴 열기/닫기 
              $('.btn-menu').click(function(){
-                 $('nav').css({left: 0});
+                 $('nav').animate({left: "0"});
              });
              $('.btn-cls').click(function(){
                  $('nav').css({left: "-100%"}); 
              });
  
-             $('.sub').slideUp();
-             //서브메뉴 
+             // 서브메뉴 
              $('nav>ul>li').click(function(){
                  $(this).children('.sub').stop().slideToggle();
                  $(this).siblings().children('.sub').slideUp();
              });
+             $('.sub').slideUp();
  
-             // 포커스
+             // 포커스 이벤트
              $('.btn-menu').focusin(function(){
-                 $('nav').css({left: "0"});
-             })
-             $('nav>ul>li:last-child li:last-child').focusout(function(){
-                 $('nav').css({left: "-100%"}); // '.btn-cls'에 포커스 마지막으로 오고, 한번더 어떤 동작하면 nav가 닫히게 하고 싶은데 못했다.
+                 $('nav').animate({left: "0"});
              })
  
-             // 서브 메뉴가 열릴 때 포커스 관련 이벤트 처리
+             // 서브 메뉴 열릴 때 포커스 관련 이벤트 
              $('nav>ul>li').focusin(function(){
-                 $(this).children('.sub').stop().slideToggle();
+                 $(this).children('.sub').stop().slideDown();
              })
              $('nav>ul>li').focusout(function(){
-                 $(this).siblings().find('.sub').stop().slideUp();
+                 $('.sub').stop().slideUp();
              })
-
-             
+             $('nav>ul>li:last-child li:last-child').focusout(function(){
+                $('nav').animate({left: "-100%"});
+             })   
          }
      }
 

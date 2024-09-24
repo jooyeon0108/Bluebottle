@@ -41,7 +41,6 @@ img{
 
 
 /* mobile */
-
 .pc{display: none;}
 #wrapper{
     position: relative;
@@ -110,7 +109,6 @@ header nav{
     height: 100%;
     background-color: #ffffff;
     z-index: 50;
-    transition: left 0.6s;
 }
 header nav .top{
     height: 74px;
@@ -195,7 +193,6 @@ header nav .bottom img{
     padding: 14px;
     padding-top: 0;
     overflow: hidden;
-
 }
 .swiper .swiper-wrapper{
     width: 100%;
@@ -209,19 +206,19 @@ header nav .bottom img{
     position: relative;
 }
 .swiper .swiper-wrapper .s1{
-    background-image: url(../images/D2C_Blog_news_NOLA_072224_1_7d785e9b-1a87-422a-ad66-563d5301efd4.webp);
+    background-image: url(../images/slide1_m.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s2{
-    background-image: url(../images/slide3_m.png);
+    background-image: url(../images/slide2_m.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .swiper .swiper-wrapper .s3{
-    background-image: url(../images/slide1_m.png);
+    background-image: url(../images/slide3_m.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -235,7 +232,6 @@ header nav .bottom img{
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 10px #000000;
-
 }
 .swiper .swiper-wrapper .swiper-slide .text .p1{
     font-size: 22px;
@@ -256,7 +252,7 @@ header nav .bottom img{
     background: unset;
     background-color: #ffffffc0;
     border-radius: 50px;
-    box-shadow: 1px 1px 10px #05050569;
+    box-shadow: 1px 1px 10px #7e7e7e69;
 }
 .swiper-pagination{
     text-align: center;
@@ -268,9 +264,6 @@ header nav .bottom img{
 .swiper-button-next{
     right: 5%;
 }
-.swiper-pagination-bullet{ /* 원모양 테두리 */
-    /* border: 1px solid #bbbbbb; */
-}
 :root{
     --swiper-pagination-color: rgb(255, 255, 255);
     --swiper-pagination-bullet-size: 16px;
@@ -281,40 +274,45 @@ header nav .bottom img{
 }
 :root{
     --swiper-navigation-size: 22px;
-    --swiper-navigation-color: #ffffffc9;
+    --swiper-navigation-color: #ffffff;
 }
 .contents{
-    margin: 40px auto 0;
+    margin: 50px auto 0;
 }
 .contents .con1{
-    margin: 0 auto;
+    margin: 0 14px;
 }
 .contents .con1 .top h2 a{
     display: block;
-    color: rgb(161, 131, 131);
+    color: rgb(128, 122, 118);
     font-size: 24px;
-    font-weight: bolder;
+    font-weight: bold;
     text-align: center;
 }
 .contents .con1 .top p{
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 300;
     color: #8a8989;
+    padding: 2px 0 10px;
 }
 .contents .con1 ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
 }
+.contents .con1 ul li{
+    margin: 10px auto;
+}
 .contents .con1 ul li a{
     display: block;
     color: gray;
     padding: 0;
     background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 10px #b6b6b6;
+    box-shadow: 2px 2px 3px #9e9e9e65;
     border-radius: 5%;
-    margin: 0 20px;
     width: 200px;
+    overflow: hidden;
 }
 .contents .con1 h2 a.pc{display: none;}
 .contents .con1 ul li a .text{
@@ -325,115 +323,77 @@ header nav .bottom img{
     font-weight: 300;
 }
 .contents .con1 ul li a .text .p2{
-    font-size: 12px;
-    font-weight: 200;
-    color: rgb(145, 118, 118);
+    font-size: 13px;
+    padding-top: 5px;
+    color: #b6b6b6;
 }
 .contents .con1 ul li a .photo{
-    height: 160px;
+    width: 240px;
+    height: 180px;
     overflow: hidden;
-}
-.contents .con1 ul li a .photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5% 5% 0 0;
-    background-color: #f0eeed;
-}
-.contents .con2{
-    width: 100vw;
-    height: 300px;
-    margin-top: 30px;
     position: relative;
 }
-.contents .con2 .box{
-    width: 100%;
-    height: 300px;
-    background-image: url(../images/staff_brewing0.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.contents .con2 .text{
+.contents .con1 ul li a .photo img{
+    border-radius: 5% 5% 0 0;
+    background-color: #f0eeed;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
+    top: -20px;
+    left: -20px;
 }
-.contents .con2 .text h2{
-    font-size: 32px;
-}
-.contents .con2 .text p{
-    font-size: 14px;
-    padding: 10px;
-    text-wrap: nowrap;
-}
-.contents .con2 button{
-    color: #2e2e2e;
-    width: 110px;
-    height: 36px;
-    font-size: 16px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #ffffff, #d8d8d8); /*그라데이션 색 효과*/
-    box-shadow: 0 4px 6px rgba(77, 76, 76, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -60%);
-}
-.contents .con2 button:hover{
-    top: 59.5%;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-}
-.contents .con3{
+.contents .con2{
     max-width: 1500px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 50px;
 }
-.contents .con3 h2{
+.contents .con2 h2 a{
     text-align: center;
+    display: block;
+    color: rgb(128, 122, 118);
+    font-size: 24px;
 }
-.contents .con3 .box{
-    padding: 20px;
+.contents .con2 .box{
+    padding: 16px 20px 20px;
 }
-.contents .con3 .box .text{
+.contents .con2 .box .text{
     text-align: center;
+    padding-top: 10px;
 }
-.contents .con3 .box .text .p1{
-    font-size: 20px;
+.contents .con2 .box .text .p1{
+    font-size: 22px;
     padding: 10px;
-    font-weight: 500;
-    color: #635757;
+    color: #747474;
 }
-.contents .con3 .box .text .p2{
-    font-size: 14px;
-    color: #8a8989;
+.contents .con2 .box .text .p2{
+    font-size: 13px;
+    font-weight: 300;
+    color: #a5a5a5;
 }
-.contents .con3 .box1{
+.contents .con2 .box{
     margin-bottom: 20px;
 }
-
-
-
 footer{
-    height: 100px;
     background-color: #dddddd;
 }
 footer .logo{
     padding: 20px 0 10px;
 }
 footer .logo img{
-    width: 160px;
+    width: 240px;
     margin: 0 auto;
 }
+footer .sns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer .sns li a img{
+    width: 40px;
+}
+
 footer .copy{
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
-    padding: 0 20px 10px;
+    padding: 10px 20px;
     color: rgb(114, 111, 111)
 }
 
@@ -511,34 +471,7 @@ footer .copy{
     .contents .con1 ul li a .p2{
         font-size: 15px;
     }
-    .contents .con2{
-        height: 600px;
-        background-color: pink;
-    }
-    .contents .con2{
-        height: 400px;
-    }
-    .contents .con2 .box{
-        height: 400px;
-    }
-    .contents .con2 .text h2{
-        font-size: 50px;
-    }
-    .contents .con2 .text p{
-        font-size: 24px;
-        padding-top: 4px;
-    }
-    .contents .con2 button{
-        font-size: 20px;
-        width: 220px;
-        height: 70px;
-        border-radius: 50px;
-        font-size: 24px;
-        margin-top: 20px;
-    }
-    
 }
-
 
 @media (min-width: 1200px){  /* pc */
     .pc{display: block;}
@@ -578,7 +511,6 @@ footer .copy{
         transition: none;
         z-index: 50;
     }
-   
     header nav .top{
         height: unset;
     }
@@ -651,13 +583,13 @@ footer .copy{
         height: 600px;
     }
    .swiper .swiper-wrapper .s1{
-        /* background-image: url(../images/D2C_Blog_news_NOLA_080524_3.webp); */
+        background-image: url(../images/slide1_pc.png);
    }
    .swiper .swiper-wrapper .s2{
-        background-image: url(../images/slide3_pc.jpg);
+        background-image: url(../images/slide2_pc.jpg);
    }
    .swiper .swiper-wrapper .s3{
-        background-image: url(../images/slide1_pc.jpg);
+        background-image: url(../images/slide3_pc.jpg);
    }
    .swiper .swiper-wrapper .swiper-slide .text{
         top: 45%;
@@ -679,16 +611,16 @@ footer .copy{
         width: 100px;
         background: unset;
         background-color: #ffffffc2;
-        
    }
    .swiper-button-prev{
-        left: 5%;
+        left: 10%;
     }
     .swiper-button-next{
-        right: 5%;
+        right: 10%;
     }
-   
-   
+    :root{
+        --swiper-navigation-size: 30px;
+    }
     .contents{
         margin: 0 auto;
         padding-top: 80px;
@@ -697,6 +629,7 @@ footer .copy{
         width: 100%;
         max-width: 1500px;
         position: relative;
+        margin: 0 auto;
     }
     .contents .con1 .top{
         display: flex;
@@ -729,20 +662,20 @@ footer .copy{
         position: absolute;
         display: block;
         right: 18px;
-        top: 35px;
+        top: 28px;
         color: rgb(148, 153, 156);
         font-size: 14px;
     }
     /**/
     .contents .con1 ul{
-        padding: 50px 0;
+        padding: 50px 30px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
     }
     .contents .con1 ul li a{
         /* margin: 0 20px; */
         /* padding: 0; */
-        width: 300px;
+        width: 340px;
     }
     .contents .con1 ul li a .text{
         padding: 50px;
@@ -750,51 +683,24 @@ footer .copy{
     .contents .con1 ul li a .text .p1{
         font-size: 18px;
     }
-    .contents .con1 ul li a .text .p2{
-        font-size: 13px;
-        padding-top: 5px;
-        color: #b6b6b6;
-    }
     .contents .con1 ul li a .photo{
-        width: 300px;
-        height: 280px;
+        width: 420px;
+        height: 320px;
         overflow: hidden;
     }
-
-
+    .contents .con1 ul li a .photo img{
+        left: -43px;
+        top: -46px;
+    }
     .contents .con2{
-        height: 500px;
-    }
-    .contents .con2 .box{
-        height: 100%;
-        background-image: url(../images/staff_clap.jpg);
-        background-position: center;
-    }
-    .contents .con2 .text{
-        top: 45%;
-    }
-    .contents .con2 .text h2{
-        font-size: 58px;
-    }
-    .contents .con2 .text p{
-        font-size: 20px;
-        padding: 10px 0;
-    }
-    .contents .con2 button{
-        width: 140px;
-        height: 44px;
-        font-size: 15px;
-        margin-top: 15px;
-    }
-    .contents .con3{
         position: relative;
         padding-bottom: 50px;
     }
-    .contents .con3 h2{
+    .contents .con2 h2{
         position: relative;
         margin-bottom: 20px;
     }
-    .contents .con3 h2 a:nth-child(1){
+    .contents .con2 h2 a:nth-child(1){
         padding-bottom: 10px;
         display: block;
         font-size: 25px;
@@ -813,7 +719,7 @@ footer .copy{
         align-items: center;
         justify-content: center;
     }
-    .contents .con3 h2::after{
+    .contents .con2 h2::after{
         content: '';
         display: block;
         width: calc(100% - 200px);
@@ -823,7 +729,7 @@ footer .copy{
         right: 0;
         bottom: 0;
     }
-    .contents .con3 .more{   /* 전체보기 버튼*/
+    .contents .con2 .more{   /* 전체보기 버튼*/
         position: absolute;
         display: block;
         right: 18px;
@@ -831,28 +737,27 @@ footer .copy{
         color: rgb(148, 153, 156);
         font-size: 14px;
     }
-    .contents .con3 .box{
+    .contents .con2 .box{
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    .contents .con3 .box .text .p1{
+    .contents .con2 .box .text .p1{
         font-size: 28px;
         font-weight: 500;
         color: #4d4b4b;
     }
-    .contents .con3 .box .text .p2{
+    .contents .con2 .box .text .p2{
         font-size: 16px;
         color: #8a8989;
     }
-    .contents .con3 .box1{
+    .contents .con2 .box1{
         margin-bottom: 0;
     }
-    .contents .con3 .box2 .photo{
+    .contents .con2 .box2 .photo{
         order: 2;
     }
-    .contents .con3 .box2 .text{
+    .contents .con2 .box2 .text{
         order: 1;
     }
-
 }
