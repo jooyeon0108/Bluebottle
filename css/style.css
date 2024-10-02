@@ -104,11 +104,12 @@ header .menubg{display: none;}
 header nav{
     position: fixed;
     top: 0;
-    left: -300px;
+    left: -100%;
     width: 300px;
     height: 100%;
     background-color: #ffffff;
     z-index: 50;
+    transition: left 0.6s;
 }
 header nav .top{
     height: 74px;
@@ -166,9 +167,13 @@ header nav > ul > li > a:focus{
     color: rgb(21, 161, 255);
 }
 
-header nav .sub{
-    display: none;
+header nav > ul li .sub{
+    height: fit-content;
     padding: 10px;
+    display: none;
+}
+header nav > ul li .sub.show{
+    display: block;
 }
 header nav > ul > li .sub li a{
     display: block;
@@ -279,9 +284,6 @@ header nav .bottom img{
 .contents{
     margin: 50px auto 0;
 }
-.contents .con1{
-    margin: 0 14px;
-}
 .contents .con1 .top h2 a{
     display: block;
     color: rgb(128, 122, 118);
@@ -298,50 +300,69 @@ header nav .bottom img{
 }
 .contents .con1 ul{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     text-align: center;
+    gap: 10px;
+    max-width: calc(1024px - 50%);
+    margin: 0 auto;
+    padding: 20px;
 }
 .contents .con1 ul li{
-    margin: 10px auto;
+    margin: 0 auto;    
+}
+.contents .con1 ul li:nth-child(2),
+.contents .con1 ul li:nth-child(4){
+    padding-left: 0;
+}
+.contents .con1 ul li:nth-child(3),
+.contents .con1 ul li:nth-child(4){
+    padding-top: 0;
 }
 .contents .con1 ul li a{
     display: block;
     color: gray;
     padding: 0;
-    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 3px #9e9e9e65;
     border-radius: 5%;
-    width: 200px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    margin: 0 auto;
 }
 .contents .con1 h2 a.pc{display: none;}
 .contents .con1 ul li a .text{
-    padding: 20px;
+    height: 26%;
+    margin: 0 auto;
+    text-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contents .con1 ul li a .text .p1{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
 }
 .contents .con1 ul li a .text .p2{
-    font-size: 13px;
+    font-size: 11px;
     padding-top: 5px;
     color: #b6b6b6;
 }
 .contents .con1 ul li a .photo{
-    width: 240px;
-    height: 180px;
+    max-width: 350px;
+    width: 100%;
+    height: calc(100% - 26%);
     overflow: hidden;
-    position: relative;
+    background-color: #f0eeed;
 }
 .contents .con1 ul li a .photo img{
     border-radius: 5% 5% 0 0;
-    background-color: #f0eeed;
-    position: absolute;
-    top: -20px;
-    left: -20px;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
 }
 .contents .con2{
-    max-width: 1500px;
+    max-width: calc(1024px - 50%);
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -398,7 +419,7 @@ footer .copy{
 }
 
 
-@media (min-width: 666px){ /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
+@media (min-width: 768px) and (max-width: 1023px) { /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
     #wrapper{
         width: 100%;
     }
@@ -435,13 +456,13 @@ footer .copy{
         width: 40px;
     }
     header nav > ul > li > a{
-        font-size: 36px;
+        font-size: 28px;
     }
     header nav > ul > li .sub{
         display: none;
     }
     header nav > ul > li .sub li a{
-        font-size: 22px;
+        font-size: 18px;
         padding: 24px;
     }
     header nav .bottom img{
@@ -460,36 +481,41 @@ footer .copy{
     .swiper ul li{
         height: 600px;
     }
-    .contents .con1 h2 a{
+    .contents .con1 .top h2 a{
         font-size: 26px;
-        padding-top: 50px;
         padding-bottom: 10px;
     }
-    .contents .con1 ul li a .p1{
-        font-size: 20px;
+    .contents .con1 ul{
+        max-width: 80%;
     }
-    .contents .con1 ul li a .p2{
-        font-size: 15px;
+    .contents .con2 {
+        max-width: 840px
+    }
+    .contents .con2 .box .text .p1{
+        font-size: 24px;
     }
 }
 
-@media (min-width: 1200px){  /* pc */
+@media (min-width: 1024px){  /* pc */
     .pc{display: block;}
     .m{display: none;}
     header{
         max-width: 1500px;
         margin: 0 auto;
         height: 80px;
+        padding: 0 20px;
     }
     header h1{
         order: 1;
     }
     header h1 a img{
-        width: 220px;
+        min-width: 220px;
     }
     header .util{
         order: 3;
         padding: 10px;
+        padding-left: 240px;
+        white-space: nowrap;
     }
     header .util span{
         font-size: 24px;
@@ -502,14 +528,15 @@ footer .copy{
     header nav .top img{display: none;}
     header nav .top .btn-cls{display: none;}
     header nav{
-        position: absolute;
-        top: 0;
-        left: 300px;
+        position: unset;
+        /* top: 0;
+        left: 300px; */
         width: unset;
         height: unset;
         background-color: unset;
         transition: none;
         z-index: 50;
+        order: 2;
     }
     header nav .top{
         height: unset;
@@ -566,7 +593,7 @@ footer .copy{
         top: 80px;
         background-color: #ffffffd0;
         width: 100vw;
-        height: 270px;
+        height: 260px;
         z-index: 40;
         display: none;
         box-sizing: border-box;
@@ -623,6 +650,7 @@ footer .copy{
     }
     .contents{
         margin: 0 auto;
+        padding: 0 20px;
         padding-top: 80px;
     }
     .contents .con1{
@@ -652,7 +680,6 @@ footer .copy{
     .contents .con1 .top p{
         display: block;
         width: calc(100% - 200px);
-        font-size: 15px;
         color: rgb(153, 145, 145);
         border-bottom: 1px solid rgb(148, 153, 156);
         padding: 22px 20px 8px;
@@ -668,33 +695,43 @@ footer .copy{
     }
     /**/
     .contents .con1 ul{
-        padding: 50px 30px;
+        padding: 50px 0;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 10px;
+        max-width: unset;
+    }
+    .contents .con1 ul li:nth-child(2),
+    .contents .con1 ul li:nth-child(4){
+        padding-left: unset;
+    }
+    .contents .con1 ul li:nth-child(3),
+    .contents .con1 ul li:nth-child(4){
+        padding-top: unset;
     }
     .contents .con1 ul li a{
-        /* margin: 0 20px; */
-        /* padding: 0; */
-        width: 340px;
+        max-width: 350px;
+        height: unset;
     }
     .contents .con1 ul li a .text{
-        padding: 50px;
+        padding: 30px;
+        height: unset;
+        display: block;
+        justify-content: unset;
+        flex-direction: unset;
     }
     .contents .con1 ul li a .text .p1{
         font-size: 18px;
     }
     .contents .con1 ul li a .photo{
-        width: 420px;
-        height: 320px;
+        width: 100%;
+        height: unset;
         overflow: hidden;
-    }
-    .contents .con1 ul li a .photo img{
-        left: -43px;
-        top: -46px;
+        max-width: unset;
     }
     .contents .con2{
         position: relative;
         padding-bottom: 50px;
+        max-width: 1500px;
     }
     .contents .con2 h2{
         position: relative;
@@ -745,11 +782,9 @@ footer .copy{
     .contents .con2 .box .text .p1{
         font-size: 28px;
         font-weight: 500;
-        color: #4d4b4b;
     }
     .contents .con2 .box .text .p2{
-        font-size: 16px;
-        color: #8a8989;
+        font-size: 15px;
     }
     .contents .con2 .box1{
         margin-bottom: 0;

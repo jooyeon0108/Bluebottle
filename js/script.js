@@ -1,110 +1,75 @@
-$(document).ready(function(){
-
-    //슬라이드(swiper)
+$(document).ready(function () {
     let swiper = new Swiper('.swiper', {
+        loop: true,
         spaceBetween: 30,
+        speed: 1000,
         effect: 'fade',
         observer: true,
         observeParents: true,
-        loop: true,
-        autoplay : {
-            delay: 3200,
-            disableOnInteraction: false // 사용자 인터랙션 후에도 autoplay 재시작
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
         },
-        speed: 1000,
-        
-        // 페이지네이션 
-        pagination: {   // 슬라이드 넘버
-          el: '.swiper-pagination',
-          clickable: true
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-    });
+        }
+    }); // swiper
 
-     // 브레이크포인트  
-     checkWindowSize();
-     $(window).resize(function(){
-         checkWindowSize();   
-         
-         swiper.update();
-         swiper.autoplay.start();
-     });
- 
-     function checkWindowSize(){
-         var windowWidth = $(window).width();
- 
-         if (windowWidth >= 1200) {
-             // pc 
+    function checkWindowSize () {
+        let windowWidth = $(window).width();
 
-             // Swiper autoplay가 PC 전환 시 멈추지 않도록 재시작
-             swiper.autoplay.start(); 
+        if (windowWidth >= 1024) {
+            // pc
+            swiper.autoplay.start();
 
-             // 기존 모바일, 태블릿에서 설정한 클릭 이벤트 해제
-             $('.btn-menu, .btn-cls').off('click');
-             $('nav>ul>li').off('click focusin focusout');
- 
-             // pc 전용 마우스 이벤트 추가
-             $('nav>ul>li').off('mouseover mouseout') // 이벤트 중복 방지를 위해 기존 이벤트 해제
-                 .on('mouseover', function(){
-                     $('.sub, .menubg').stop().slideDown();
-                 }).on('mouseout', function(){
-                     $('.sub, .menubg').stop().slideUp();
-                 })   
- 
-             // pc에서는 nav가 항상 보이도록.
-             $('nav').css({left: "300px"}); 
+            $('.btn-cls, .btn-menu').off('click');
+            $('nav>ul>li').off('click');
 
-         } else {
-             // mobile + tablet
-             
-             // 모바일/태블릿 전환 시에도 Swiper autoplay가 멈추지 않도록 보장
-             swiper.autoplay.start();
+            $('nav>ul>li').off('mouseover mouseout').on('mouseover', function () {
+                $('.sub, .menubg').stop().slideDown();
+            }).on('mouseout', function () {
+                $('.sub, .menubg').stop().slideUp();
+            });
 
-             // pc 마우스 이벤트 제거
-             $('nav>ul>li').off('mouseover mouseout');
- 
-             // nav 초기상태 설정
-             $('nav').css({left: "-100%"});
- 
-             // 메뉴 열기/닫기 
-             $('.btn-menu').click(function(){
-                 $('nav').animate({left: "0"});
-             });
-             $('.btn-cls').click(function(){
-                 $('nav').css({left: "-100%"}); 
-             });
- 
-             // 서브메뉴 
-             $('nav>ul>li').click(function(){
-                 $(this).children('.sub').stop().slideToggle();
-                 $(this).siblings().children('.sub').slideUp();
-             });
-             $('.sub').slideUp();
- 
-             // 포커스 이벤트
-             $('.btn-menu').focusin(function(){
-                 $('nav').animate({left: "0"});
-             })
- 
-             // 서브 메뉴 열릴 때 포커스 관련 이벤트 
-             $('nav>ul>li').focusin(function(){
-                 $(this).children('.sub').stop().slideDown();
-             })
-             $('nav>ul>li').focusout(function(){
-                 $('.sub').stop().slideUp();
-             })
-             $('nav>ul>li:last-child li:last-child').focusout(function(){
-                $('nav').animate({left: "-100%"});
-             })   
-         }
-     }
+            // 모바일에 남아있는 클래스 초기화
+            $('nav>ul>li .sub').removeClass('show').hide();
 
-});
+        } else {
+            // mobile + table
+            swiper.autoplay.start();
 
-
+            // 초기화
+            $('nav').css({left: '-100%'});
+            $('nav>ul>li').off('click mouseover mouseout');
+            $('nav>ul>li .sub').removeClass('show').hide();  // 메뉴 숨김 초기화
+            $('.sub').css({height: 'unset'});
             
-                                   
+            // 메뉴 열고 닫기
+            $('.btn-menu').off('click').on('click', function(){
+                $('nav').css({left: 0});
+            });
+            $('.btn-cls').off('click').on('click', function(){
+                $('nav').css({left: '-100%'});
+            });
+
+            // 모바일 메뉴 클릭
+            $('nav>ul>li').off('click').on('click', function(){
+                $(this).children('.sub').stop().slideToggle().toggleClass('show');
+                $(this).siblings().children('.sub').stop().slideUp().removeClass('show');
+            });   
+        }
+    }
+
+    checkWindowSize();
+    $(window).resize(function(){
+        checkWindowSize();
+
+        swiper.update();
+        swiper.autoplay.start();
+    });
+})
