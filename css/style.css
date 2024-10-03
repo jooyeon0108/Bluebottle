@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'pretendard';
+    font-family: 'Pretendard-Regular';
 }
 *::before, *::after{
     box-sizing: border-box;
@@ -37,7 +37,7 @@ img{
     max-width: 100%;
     display: block;
 }
-/* reset 끝 */
+/* reset */
 
 
 /* mobile */
@@ -54,7 +54,7 @@ img{
 }
 header{
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +68,7 @@ header h1 a{
     display: block;
 }
 header h1 a img{
-    width: 60px;
+    width: 50px;
     margin: 0 auto;
 }
 header .btn-menu{
@@ -92,6 +92,7 @@ header .btn-menu::after{
     background-color:rgb(150, 147, 147);
     border-radius: 2px;
 }
+
 header .util{
     order: 3;
     padding-right: 8px;
@@ -112,24 +113,26 @@ header nav{
     transition: left 0.6s;
 }
 header nav .top{
-    height: 74px;
+    height: 50px;
+    position: relative;
 }
 header nav .top .btn-cls{
     font-size: 0;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
     display: block;
 }
 header nav .top .btn-cls::before{
     content: '';
     display: block;
-    width: 30px;
+    width: 24px;
     height: 4px;
     border-radius: 2px;
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(194, 194, 194);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -138,10 +141,10 @@ header nav .top .btn-cls::before{
 header nav .top .btn-cls::after{
     content: '';
     display: block;
-    width: 30px;
+    width: 24px;
     height: 4px;
     border-radius: 2px;
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(194, 194, 194);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -149,7 +152,10 @@ header nav .top .btn-cls::after{
 }
 header nav > ul{
     width: 100%;
+    height: 100%;
     text-align: left;
+    background-color: white;
+    padding: 0 10px;
 }
 header nav > ul > li{
     margin: 0 auto;
@@ -159,14 +165,14 @@ header nav > ul > li > a{
     font-size: 20px;
     font-weight: 700;
     display: block;
-    color: #4d4b4b;
+    color: #333;
     padding: 16px;
+    text-align: center;
 }
 header nav > ul > li:hover > a,
 header nav > ul > li > a:focus{
-    color: rgb(21, 161, 255);
+    color: rgb(22, 163, 245);
 }
-
 header nav > ul li .sub{
     height: fit-content;
     padding: 10px;
@@ -181,16 +187,20 @@ header nav > ul > li .sub li a{
     padding: 20px;
     font-size: 14px;
     color: #000000;
+    /* background-color: #eceaea; */
+    text-align: center;
 }
 header nav > ul > li .sub li a:hover,
 header nav > ul > li .sub li a:focus{
-    color: rgb(6, 93, 255);
+    color: rgb(22, 163, 245);
+    /* background-color: rgb(88, 88, 88); */
 }
 header nav .bottom img{
-    width: 100px;
+    width: 160px;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .swiper{
     width: 100%;
@@ -262,7 +272,6 @@ header nav .bottom img{
 .swiper-pagination{
     text-align: center;
 }
-
 .swiper-button-prev{
     left: 5%;
 }
@@ -410,7 +419,6 @@ footer .sns{
 footer .sns li a img{
     width: 40px;
 }
-
 footer .copy{
     font-size: 12px;
     text-align: center;
@@ -419,51 +427,51 @@ footer .copy{
 }
 
 
+
 @media (min-width: 768px) and (max-width: 1023px) { /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
     #wrapper{
         width: 100%;
     }
     header{
-        height: 100px;
+        height: 80px;
     }
     header h1 a img{
-        width: 70px;
+        /* width: 70px; */
     }
     header .btn-menu::before,
     header .btn-menu span,
     header .btn-menu::after{
-        font-size: 0;
-        content: '';
-        display: block;
-        height: 4px;
-        width: 25px;
-        background-color:rgb(150, 147, 147);
-        border-radius: 2px;
+        /* font-size: 0; */
+        /* content: ''; */
+        /* display: block; */
+        /* height: 4px; */
+        /* width: 25px; */
+        /* background-color:rgb(150, 147, 147); */
+        /* border-radius: 2px; */
     }
     header nav{
         left: -100%;
     }
     header nav .top{
-        height: 100px;
+        height: 80px;
     }
     header nav .top .btn-cls{
         width: 70px;
         height: 70px;
-        top: 14px;
     }
     header nav .top .btn-cls::before,
     header nav .top .btn-cls::after{
-        width: 40px;
+        /* width: 30px; */
     }
     header nav > ul > li > a{
-        font-size: 28px;
+        /* font-size: 28px; */
     }
     header nav > ul > li .sub{
         display: none;
     }
     header nav > ul > li .sub li a{
-        font-size: 18px;
-        padding: 24px;
+        /* font-size: 18px; */
+        /* padding: 24px; */
     }
     header nav .bottom img{
         width: 120px;
@@ -693,7 +701,6 @@ footer .copy{
         color: rgb(148, 153, 156);
         font-size: 14px;
     }
-    /**/
     .contents .con1 ul{
         padding: 50px 0;
         grid-template-columns: 1fr 1fr 1fr 1fr;
