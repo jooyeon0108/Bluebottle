@@ -205,8 +205,6 @@ header nav .bottom img{
 .swiper{
     width: 100%;
     height: 600px;
-    padding: 14px;
-    padding-top: 0;
     overflow: hidden;
 }
 .swiper .swiper-wrapper{
@@ -609,7 +607,6 @@ footer .copy{
     .swiper{
         height: 600px;
         margin: 0 auto;
-        padding: 0;
     }
     .swiper .swiper-wrapper{
         height: 600px;
