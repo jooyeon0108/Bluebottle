@@ -96,37 +96,37 @@
                     </button>
             </div><!--util-->
         </header>
-        <div class="menubg"></div> <!-- pc버젼 서브메뉴 펼쳤을때 같이 나오는 뒷배경 -->
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide s1">
-                        <div class="text">
-                            <p class="p1">NOLA</p>
-                            <p class="p2">새로운 시그니처</p>
-                        </div>
-                        <button type="button">CLICK</button>
+        <div class="menubg"></div> <!-- pc 서브메뉴 뒷 배경 -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s1">
+                    <div class="text">
+                        <p class="p1">NOLA</p>
+                        <p class="p2">새로운 시그니처</p>
                     </div>
-                    <div class="swiper-slide s2">
-                        <div class="text">
-                            <p class="p1">오설록</p>
-                            <p class="p2">collaboration</p>
-                        </div>
-                        <button type="button">CLICK</button>
-                    </div>
-                    <div class="swiper-slide s3">
-                        <div class="text">
-                            <p class="p1">BUSAN</p>
-                            <p class="p2">첫 매장 오픈</p>
-                        </div>
-                        <button type="button">CLICK</button>
-                    </div>
+                    <button type="button">CLICK</button>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div><!--swiper-->
+                <div class="swiper-slide s2">
+                    <div class="text">
+                        <p class="p1">오설록</p>
+                        <p class="p2">collaboration</p>
+                    </div>
+                    <button type="button">CLICK</button>
+                </div>
+                <div class="swiper-slide s3">
+                    <div class="text">
+                        <p class="p1">BUSAN</p>
+                        <p class="p2">첫 매장 오픈</p>
+                    </div>
+                    <button type="button">CLICK</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!--swiper-->
         <div class="contents">
-            <div class="con1">
+            <div class="con1 con">
                 <div class="top">
                     <h2><a href="#">BEST ITEM</a></h2>
                     <p>이번 달 블루보틀에서 가장 인기있는 상품을 만나보세요.</p>
@@ -179,10 +179,13 @@
                     </li>
                 </ul>
             </div><!--con1-->
-            <div class="con2">
-                <h2><a href="#">OUR STORY</a></h2>
-                <button class="more pc">전체보기 ></button>
-                <div class="box1 box" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="300">
+            <div class="con2 con">
+                <div class="top">
+                    <h2><a href="#">OUR STORY</a></h2>
+                    <p>블루보틀만의 철학과 소신이 담긴 이야기를 소개합니다.</p>
+                    <button class="more pc">전체보기 ></button>
+                </div>
+                <div class="box1 box" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="200">
                     <div class="photo">
                         <img src="./images/brewing000.webp" alt="커피 로스팅하는 사진">
                     </div>
@@ -193,7 +196,7 @@
                         전문 바리스타가 직접 내린 커피와 함께<br>매장에서 건강하고 행복한 시간을 보내세요.</p>
                     </div>
                 </div>
-                <div class="box2 box" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="500">
+                <div class="box2 box" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="500">
                     <div class="photo">
                         <img src="./images/staff_customer.jpg" alt="블루보틀 직원이 고객과 소통하는 사진">
                     </div>
@@ -205,6 +208,12 @@
                     </div>
                 </div>
             </div><!--con2-->
+            <div class="con3" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="200">
+               <a href="#">
+                <img class="m" src="./images/KakaoTalk_20241013_112932209ㅇㄹㄴㄹㄴ.png" alt="직원 모집 공고">
+                <img class="pc" src="./images/KakaoTalk_20241013_114716260pcpcpc.png" alt="">
+               </a>
+            </div>
         </div>
         <footer>
             <div class="logo"><img src="./images/logo3.png" alt="블루보틀커피 로고"></div>
@@ -217,7 +226,7 @@
             <div class="copy">Copyright 2024. leeminiclass All rights reserved</div>
         </footer>
     </div><!--wrapper-->
-    <script src="./js/aos.js"></script> <!-- 움직이는 효과 연결 -->
+    <script src="./js/aos.js"></script><!-- 움직이는 효과 연결 -->
     <script>
          AOS.init();
     </script>

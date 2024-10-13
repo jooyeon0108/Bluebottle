@@ -42,9 +42,9 @@ img{
 /* mobile */
 .pc{display: none;}
 #wrapper{
-    position: relative;
     width: 100%;
     height: 100%;
+    position: relative;
     overflow: hidden; 
     /* 중요!! 
     /* overflow: hidden이 기본적으로 넘친 부분을 잘라내는 역할을 하지만, 
@@ -57,8 +57,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     background-color: #fff;
+    position: relative;
 }
 header h1{
     order: 2;
@@ -164,7 +164,6 @@ header nav > ul > li > a{
     font-size: 17px;
     font-weight: 600;
     display: block;
-    color: #686666;
     padding: 20px 16px 20px 2px;
     border-top: 1px solid #d6d6d6;
 }
@@ -262,7 +261,7 @@ header nav .bottom .nav-util{
     font-size: 10px;
     height: 20px;
     width: 70px;
-    background: linear-gradient(to bottom, #ffffff, #b1b1b1);
+    background: linear-gradient(to bottom, #ffffff, #d4d4d4);
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 
@@ -291,14 +290,14 @@ header nav .bottom .nav-util{
 .contents{
     margin: 50px auto 0;
 }
-.contents .con1 .top h2 a{
+.contents .con .top h2 a{
     display: block;
     color: rgb(128, 122, 118);
     font-size: 20px;
     font-weight: 300;
     text-align: center;
 }
-.contents .con1 .top p{
+.contents .con .top p{
     text-align: center;
     font-size: 12px;
     font-weight: lighter;
@@ -376,11 +375,11 @@ header nav .bottom .nav-util{
     margin-top: 50px;
 }
 .contents .con2 h2 a{
-    text-align: center;
+    /* text-align: center;
     display: block;
     color: rgb(128, 122, 118);
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 300; */
 }
 .contents .con2 .box{
     padding: 16px 30px 20px;
@@ -397,12 +396,13 @@ header nav .bottom .nav-util{
 .contents .con2 .box .text .p2{
     font-size: 13px;
     font-weight: lighter;
-    color: #b6b6b6;
-    line-height: 16px;
+    color: #b9b9b9;
+    line-height: 18px;
 }
 .contents .con2 .box{
     margin-bottom: 20px;
 }
+
 footer{
     background-color: #cfcfcf;
 }
@@ -430,7 +430,7 @@ footer .copy{
 
 
 
-@media (min-width: 768px) and (max-width: 1023px) { /* pc에서 창 켰을때 가장 작은 width,  (mobile + tablet)  */
+@media (min-width: 768px) and (max-width: 1023px) {  /* (mobile + tablet)  */
     #wrapper{
         width: 100%;
     }
@@ -548,6 +548,8 @@ footer .copy{
         text-align: center;
         color: unset;
         border: none;
+        color: rgb(92, 92, 92);
+
     }
     header nav > ul > li:hover > a,
     header nav > ul > li > a:focus{
@@ -647,11 +649,11 @@ footer .copy{
         position: relative;
         margin: 0 auto;
     }
-    .contents .con1 .top{
+    .contents .con .top{
         display: flex;
         align-items: center;
     }
-    .contents .con1 .top h2 a{
+    .contents .con .top h2 a{
         border-radius: 20px 20px 0 0;
         padding: 0;
         background-color: rgba(73, 64, 64, 0.842);
@@ -665,21 +667,24 @@ footer .copy{
         justify-content: center;
         text-align: left;
     }
-    .contents .con1 .top p{
+    .contents .con .top p{
         display: block;
         width: calc(100% - 200px);
-        color: rgb(153, 145, 145);
-        border-bottom: 1px solid rgb(148, 153, 156);
-        padding: 22px 20px 8px;
+        color: rgb(180, 180, 180);
+        border-bottom: 1px solid rgb(179, 179, 179);
+        padding: 20px 20px 12px;
         text-align: left;
+        font-size: 14px;
+        font-weight: 100;
     }
-    .contents .con1 .top .more{   /* 전체보기 버튼*/
+    .contents .con .top .more{   /* 전체보기 버튼*/
         position: absolute;
         display: block;
-        right: 18px;
-        top: 28px;
-        color: rgb(148, 153, 156);
-        font-size: 14px;
+        right: 2px;
+        top: 25px;
+        color: rgb(180, 180, 180);
+        font-size: 13px;
+        font-weight: 100;
     }
     .contents .con1 ul{
         padding: 50px 0;
@@ -696,7 +701,7 @@ footer .copy{
         padding-top: unset;
     }
     .contents .con1 ul li a{
-        max-width: 350px;
+        max-width: 360px;
         height: unset;
     }
     .contents .con1 ul li a .text{
@@ -709,6 +714,9 @@ footer .copy{
     .contents .con1 ul li a .text .p1{
         font-size: 18px;
     }
+    .contents .con1 ul li a .text .p2{
+        font-size: 14px;
+    }
     .contents .con1 ul li a .photo{
         width: 100%;
         height: unset;
@@ -720,11 +728,11 @@ footer .copy{
         padding-bottom: 50px;
         max-width: 1500px;
     }
-    .contents .con2 h2{
-        position: relative;
-        margin-bottom: 20px;
+     .contents .con2 .top{
+        margin-bottom: 50px;
     }
-    .contents .con2 h2 a:nth-child(1){
+    /*
+    .contents .con2 .top h2 a:nth-child(1){
         padding-bottom: 10px;
         display: block;
         font-size: 25px;
@@ -739,11 +747,11 @@ footer .copy{
         width: 200px;
         height: 50px;
         display: flex; /* 가운데로 정렬 */
-        flex-direction: column;
+        /* flex-direction: column;
         align-items: center;
-        justify-content: center;
-    }
-    .contents .con2 h2::after{
+        justify-content: center; 
+    }*/
+    /* .contents .con2 .top h2::after{
         content: '';
         display: block;
         width: calc(100% - 200px);
@@ -752,15 +760,23 @@ footer .copy{
         position: absolute;
         right: 0;
         bottom: 0;
-    }
-    .contents .con2 .more{   /* 전체보기 버튼*/
+    } */
+    /* .contents .con2 .top p{
+        display: block;
+        width: calc(100% - 200px);
+        color: rgb(153, 145, 145);
+        border-bottom: 1px solid rgb(148, 153, 156);
+        padding: 22px 20px 8px;
+        text-align: left;
+    } */
+    /* .contents .con2 .top .more{   전체보기 버튼 
         position: absolute;
         display: block;
         right: 18px;
         top: 28px;
         color: rgb(148, 153, 156);
         font-size: 14px;
-    }
+    } */
     .contents .con2 .box{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -781,5 +797,17 @@ footer .copy{
     }
     .contents .con2 .box2 .text{
         order: 1;
+    }
+    .contents .con3{
+        max-width: 1500px;
+        margin: 0 auto 50px;
+        padding: 50px 0;
+    }
+    .contents .con3 a{
+        display: block;
+    }
+    .contents .con3 a img{
+        margin: 0 auto;
+
     }
 }
